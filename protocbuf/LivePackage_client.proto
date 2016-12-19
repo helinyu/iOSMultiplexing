@@ -1,0 +1,90 @@
+//使用ProtocolBuffer 2 编译
+ 
+message CreateRoomRequest {
+    required string admin = 1;
+}
+ 
+message CreateRoomResponse {
+    required int32 result = 1;
+}
+ 
+message EnterRoomRequest {
+    required string RoomId = 1;
+}
+ 
+message UserInfo {
+    required string UserId = 1;
+    optional string Nickname = 2;
+    optional string HeadUrl  = 3;
+};
+ 
+message EnterRoomResponse {
+    required int32 result = 1;
+    repeated UserInfo users = 2;
+    message Statement {
+        optional int32 online = 1;
+    };
+    optional Statement statement = 3;
+    optional string id = 4;//系统分配客户端唯一id
+    optional int64 likeTotal = 5;
+}
+ 
+message LoginRequest {
+    required string auth = 1;
+    required string NickName = 2;
+    required string HeadUrl = 3;
+}
+ 
+message LoginResponse {
+    required int32 result = 1;
+}
+ 
+message TalkRequest {
+    required string id      = 1;
+    required string content = 3;
+    required int32  type    = 4;
+    required uint64 time    = 5;
+}
+ 
+message TalkResponse {
+    required string id      = 1;
+}
+ 
+message Broadcast {
+    required string id      = 1;
+    required string content = 2;
+    required int32  type    = 3;
+    required uint64 time    = 4;
+    optional group User = 5 {
+       required string UserId = 6;
+       optional string NickName = 7;
+       optional string HeadUrl  = 8;
+    };
+    optional string ClientId = 9;
+    optional int64 likeTotal = 10;
+}
+ 
+message CloseRoomRequest {
+    required string RoomId = 1;
+    required int32 reason = 2;
+}
+ 
+message CloseRoomResponse {
+    required int32 result = 1;
+}
+ 
+message RoomCloseBroadcast {
+    message Statement {
+        required int64 likeTotal = 1;
+        required int64 postsTotal = 2;
+        required int32 onlineTotal = 3;
+        required int32 duration = 4;
+    }
+ 
+    required Statement statement = 1;
+    required int32 reason = 2;
+}
+ 
+message MakeUserSilenceRequest {
+    required string UserId = 1;
+}
