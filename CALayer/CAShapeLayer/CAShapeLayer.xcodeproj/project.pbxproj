@@ -16,6 +16,8 @@
 		DC04D7C91E125BB2004CCC4D /* CAShapeLayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7C81E125BB2004CCC4D /* CAShapeLayerTests.m */; };
 		DC04D7D41E125BB2004CCC4D /* CAShapeLayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7D31E125BB2004CCC4D /* CAShapeLayerUITests.m */; };
 		DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E21E125BEE004CCC4D /* CAShapeLayer+ViewMask.m */; };
+		DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E51E126000004CCC4D /* AudioIconView.m */; };
+		DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E81E126677004CCC4D /* ProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		DC04D7D51E125BB2004CCC4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC04D7E11E125BEE004CCC4D /* CAShapeLayer+ViewMask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+ViewMask.h"; sourceTree = "<group>"; };
 		DC04D7E21E125BEE004CCC4D /* CAShapeLayer+ViewMask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+ViewMask.m"; sourceTree = "<group>"; };
+		DC04D7E41E126000004CCC4D /* AudioIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioIconView.h; sourceTree = "<group>"; };
+		DC04D7E51E126000004CCC4D /* AudioIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioIconView.m; sourceTree = "<group>"; };
+		DC04D7E71E126677004CCC4D /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
+		DC04D7E81E126677004CCC4D /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,10 @@
 			children = (
 				DC04D7E11E125BEE004CCC4D /* CAShapeLayer+ViewMask.h */,
 				DC04D7E21E125BEE004CCC4D /* CAShapeLayer+ViewMask.m */,
+				DC04D7E41E126000004CCC4D /* AudioIconView.h */,
+				DC04D7E51E126000004CCC4D /* AudioIconView.m */,
+				DC04D7E71E126677004CCC4D /* ProgressView.h */,
+				DC04D7E81E126677004CCC4D /* ProgressView.m */,
 				DC04D7B11E125BB1004CCC4D /* AppDelegate.h */,
 				DC04D7B21E125BB1004CCC4D /* AppDelegate.m */,
 				DC04D7B41E125BB1004CCC4D /* ViewController.h */,
@@ -285,6 +295,8 @@
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
+				DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */,
+				DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
