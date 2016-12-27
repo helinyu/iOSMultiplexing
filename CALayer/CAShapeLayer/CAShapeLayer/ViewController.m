@@ -10,7 +10,7 @@
 #import "CAShapeLayer+ViewMask.h"
 #import "AudioIconView.h"
 #import "ProgressView.h"
-#import "ProgressView.h"
+#import "BasicAnimationView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -23,7 +23,17 @@
 
 //    [self test0];
 //    [self test1] ;
-    [self test2];
+//    [self test2];
+    [self testBasicAnimation];
+}
+
+//1.初始化动画并设置动画属性
+//2.设置动画属性初始值（可以省略）、结束值以及其他动画属性
+//3.给图层添加动画
+-(void)testBasicAnimation {
+    BasicAnimationView *bAView = [[BasicAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:bAView];
+    [bAView translatonAnimation:CGPointMake(300, 300)];
 }
 
 // 绘画进度条
