@@ -18,7 +18,7 @@
     CGFloat topSpace = 15;
     CGPoint point1 = CGPointMake(0, 0);
     CGPoint point2 = CGPointMake(viewWidth+rightSpace, 0);
-    // 注意以这个view为边界，也就是具有覆盖的作用
+    // 注意以这个view为边界，也就是具有覆盖的作用(所以，超过的部分就会被截断)
     CGPoint point3 = CGPointMake(viewWidth-rightSpace, topSpace);
     CGPoint point4 = CGPointMake(viewWidth, topSpace);
     CGPoint point5 = CGPointMake(viewWidth-rightSpace, topSpace+10.);
