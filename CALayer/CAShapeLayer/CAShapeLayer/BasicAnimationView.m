@@ -87,6 +87,10 @@
     [_layer addAnimation:basicAnimation forKey:@"KCBasicAnimation_Translation"]; //(la1) layer 添加animation
     
     [basicAnimation setValue:[NSValue valueWithCGPoint:location] forKey:@"KCBasicAnimationLocation"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_layer removeFromSuperlayer];
+    });
 
 }
 
@@ -147,15 +151,22 @@
 //    _layer.position = [baseAnimation.toValue CGPointValue]; // 通过这个方法来重新设置了对应的停止的位置（问题：就是冲起点到终点的滑动）？？？？？
     //开启事务
 //    
-    CABasicAnimation *baseAnimation = (CABasicAnimation *)anim;
-    //    CABasicAnimation *baseAnimation = (CABasicAnimation *)anim; // 这句话应该放到外面，避免这个关闭隐式调用时间过长
-    
-    [CATransaction begin];
-    [CATransaction disableActions];
-    _layer.position = [baseAnimation.toValue CGPointValue];
-    [CATransaction commit];
+//    CABasicAnimation *baseAnimation = (CABasicAnimation *)anim;
+//    //    CABasicAnimation *baseAnimation = (CABasicAnimation *)anim; // 这句话应该放到外面，避免这个关闭隐式调用时间过长
+//    
+//    [CATransaction begin];
+//    [CATransaction disableActions];
+//    _layer.position = [baseAnimation.toValue CGPointValue];
+//    [CATransaction commit];
     //这个方法并没有起到作用？为什么？
-    
+
+    // 这些数据要和初始化的时候大小一致
+    _layer=[CALayer layer];
+    _layer.bounds=CGRectMake(0, 0, 10, 20);
+    _layer.position=CGPointMake(300, 300);
+    _layer.backgroundColor = [UIColor yellowColor].CGColor;
+    [self.layer addSublayer:_layer];
+
     
     /* Accessors for the "disableActions" per-thread transaction property.
      * Defines whether or not the layer's -actionForKey: method is used to
@@ -237,6 +248,8 @@ CA_AVAILABLE_STARTING (10.6, 4.0, 9.0, 2.0);
  PS:(总结)
  为什么这个还是不行呢？
  因为动画已经执行完了，就会返回到上面的那个点，所以，要设置这个点，这个时候也会调到最后的位置，也是有问题的
+ 
+ 上面的方法不行，我们可以谈过指定时间删除，然后，地址了再添加，（解决了隐藏动画执行了再执行停止动画的问题）
 #&&&&&
  
 (2)&&&& 控制时间段动画
