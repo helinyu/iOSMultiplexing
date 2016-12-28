@@ -11,6 +11,7 @@
 #import "AudioIconView.h"
 #import "ProgressView.h"
 #import "AnimationLayerView.h"
+#import "BasicAnimationView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -20,17 +21,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor grayColor];
 
 //    [self test0];
 //    [self test1] ;
 //    [self test2];
-    [self testBasicAnimation];
+//    [self testAnimationLayerView];
+    [self testBasicAnimationView];
+
+}
+
+// test basic animation with rotation and so on
+- (void)testBasicAnimationView {
+    BasicAnimationView *basicView = [[BasicAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:basicView];
+//    [basicView translatonAnimation:CGPointMake(300, 300)];
 }
 
 //1.初始化动画并设置动画属性
 //2.设置动画属性初始值（可以省略）、结束值以及其他动画属性
 //3.给图层添加动画
--(void)testBasicAnimation {
+-(void)testAnimationLayerView {
     AnimationLayerView *bAView = [[AnimationLayerView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:bAView];
 //    [bAView translatonAnimation:CGPointMake(300, 300)];

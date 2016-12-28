@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface BasicAnimationView : NSObject
+@interface BasicAnimationView : UIView
+
+-(void)translatonAnimation:(CGPoint)location;
 
 @end

@@ -50,6 +50,7 @@
 
 -(void)translatonAnimation:(CGPoint)location{
     //1.创建动画并指定动画属性 这里的keypath不是随便取的，这里是关于position进行变换的，所以，就会处理这个问题
+    // 所以，对应的内容，应该进行查找-准确地核心内容，然后实现相应的动画
     CABasicAnimation *basicAnimation=[CABasicAnimation animationWithKeyPath:@"position"];
     
     basicAnimation.delegate = self;
