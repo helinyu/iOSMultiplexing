@@ -11,6 +11,7 @@
 @interface BasicAnimationView ()<CAAnimationDelegate>
 {
     CALayer *_layer;
+    CALayer *_presentationLayer;
     CALayer *_stretchLayer;
 }
 
@@ -132,6 +133,8 @@
     
     NSLog(@"animation(%@) start.\r_layer.frame=%@",anim,NSStringFromCGRect(_layer.frame));
     NSLog(@"%@",[_layer animationForKey:@"KCBasicAnimation_Translation"]);//通过前面的设置的key获得动画
+    
+    _presentationLayer = [_layer presentationLayer];
    
 }
 
@@ -166,7 +169,8 @@
     _layer.position=CGPointMake(300, 300);
     _layer.backgroundColor = [UIColor yellowColor].CGColor;
     [self.layer addSublayer:_layer];
-
+    
+//    [self.layer addSublayer:_presentationLayer];  // 这个只是可以用来读取当时的事物的内容，不可以进行添加修改等操作
     
     /* Accessors for the "disableActions" per-thread transaction property.
      * Defines whether or not the layer's -actionForKey: method is used to
@@ -298,7 +302,190 @@ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
 testAnimaitonAttributes 上面的这个方法就写了有关属性的测试
  基本上就是打通了：mediaTimingFunction / layer （以及transaction） 的关系；
  
- （4）CALayer 图层Layer子类
+ （4）CALayer 图层Layer子类  CALayer = core animaiton layer  所以，-当然是以动画为主
+ + (instancetype)layer;
+ - (instancetype)init;
+ - (instancetype)initWithLayer:(id)layer; // 复制layer
+ - (nullable instancetype)presentationLayer;  // 返回当前在commint中的所有layer的属性，就是在执行动画的layer (和hitTest方法有关系)
+ - (nullable CALayer *)hitTest:(CGPoint)p; 显示和这点有关的子layer，不可以是CATransformLayer 。因为没有2D的坐标。
+ + (nullable id)defaultValueForKey:(NSString *)key;  这个方法在animation中也是有的，获取当期那key的信息
+ - (BOOL)shouldArchiveValueForKey:(NSString *)key;  如果对象实现了encodeWithCoder 就会调用进行归档
+ + (BOOL)needsDisplayForKey:(NSString *)key; 用于给子类重写，默认返回no，返回yes，如果layer contents 被重写（包括动画），同样需要地哦啊用super方法。
+ 
+ @property CGRect bounds; // 边界
+ @property CGPoint position; // 定点 ，默认是0
+ @property CGFloat zPosition; // Z上的，默认是0
+ @property CGPoint anchorPoint;  //定位点 就是图形的中心
+ @property CGFloat anchorPointZ;
+ @property CATransform3D transform; // 3D转场
+ - (CGAffineTransform)affineTransform;
+ - (void)setAffineTransform:(CGAffineTransform)m; // 转场的动画的设置和获取 （反射转场）
+ @property CGRect frame; //每个layer都有 frame rectangle, a function of the `position', `bounds', `anchorPoint', `transform' 这些属性，设置frame都有对应的属性和frame关联。
+ @property(getter=isHidden) BOOL hidden;
+ @property(getter=isDoubleSided) BOOL doubleSided; //false 就会去掉
+ @property(getter=isGeometryFlipped) BOOL geometryFlipped; //结合上的
+ @property(nullable, readonly) CALayer *superlayer; // 父图层
+ - (void)removeFromSuperlayer;  // 从父图层中删除
+ @property(nullable, copy) NSArray<CALayer *> *sublayers; // 子图层
+ - (void)addSublayer:(CALayer *)layer; // 添加图层
+ - (void)insertSublayer:(CALayer *)layer atIndex:(unsigned)idx;
+ - (void)insertSublayer:(CALayer *)layer below:(nullable CALayer *)sibling;
+ - (void)insertSublayer:(CALayer *)layer above:(nullable CALayer *)sibling; // 插入图层，和view一样
+ - (void)replaceSublayer:(CALayer *)layer with:(CALayer *)layer2; 替换图层
+ @property CATransform3D sublayerTransform; 父动画
+ @property(nullable, strong) CALayer *mask; 就是一个覆盖掉的内容
+ @property BOOL masksToBounds; // layer 设置图层的角（弧度）
+ 
+ - (CGPoint)convertPoint:(CGPoint)p fromLayer:(nullable CALayer *)l;
+ - (CGPoint)convertPoint:(CGPoint)p toLayer:(nullable CALayer *)l;
+ - (CGRect)convertRect:(CGRect)r fromLayer:(nullable CALayer *)l;
+ - (CGRect)convertRect:(CGRect)r toLayer:(nullable CALayer *)l;
+ - (CFTimeInterval)convertTime:(CFTimeInterval)t fromLayer:(nullable CALayer *)l;
+ - (CFTimeInterval)convertTime:(CFTimeInterval)t toLayer:(nullable CALayer *)l;
+ Mapping between layer coordinate and time spaces.   应该就是一个测试的内容
+ 
+ - (BOOL)containsPoint:(CGPoint)p; 判断是否包含这个点
+ @property(nullable, strong) id contents; layer里面包括的内容，例如：CGImageRef 、等等
+ @property CGRect contentsRect;   [0 0 1 1]. Animatable.
+ @property(copy) NSString *contentsGravity;   // 权重的问题 就是字符串定义了关于边界的关系
+ bounds rect. Options are `center', `top', `bottom', `left',
+ * `right', `topLeft', `topRight', `bottomLeft', `bottomRight',
+ * `resize', `resizeAspect', `resizeAspectFill'. The default value is
+ * `resize' 这些都是可选的字符串。
+ @property CGFloat contentsScale
+ @property CGRect contentsCenter;
+ @property(copy) NSString *contentsFormat；  Defaults to kCAContentsFormatRGBA8Uint
+ 
+ @property(copy) NSString *minificationFilter;
+ @property(copy) NSString *magnificationFilter; // 放大和缩小的问题了
+ @property float minificationFilterBias;
+ @property(getter=isOpaque) BOOL opaque;
+ - (void)display; // 不会直接调用，一般是通过drawInContext 这个方法调用后，会调用这个方法
+ - (void)setNeedsDisplay;
+ - (void)setNeedsDisplayInRect:(CGRect)r;
+ - (BOOL)needsDisplay;
+ - (void)displayIfNeeded;  // 这个几个方法其实和view上的差不多了
+ @property BOOL needsDisplayOnBoundsChange;
+ @property BOOL drawsAsynchronously
+ 
+ - (void)drawInContext:(CGContextRef)ctx;// 这个方法是通过调用display() 这个方法来调用的，子类弱项找到真实的区域，可以通过CGContextGetClipBoundingBox（） 这个方法（应该是绝对路径）
+ - (void)renderInContext:(CGContextRef)ctx; // 这方法直接渲染layer tree， 这个不可以进行设置对应的内容。
+ 
+ @property CAEdgeAntialiasingMask edgeAntialiasingMask; 定义了那边坑锯齿
+ @property BOOL allowsEdgeAntialiasing; 这个默认值是在Info.plist 这里有配置，-如果没有默认是false ，如果是true，就可以通过上一个属性设置。
+ @property(nullable) CGColorRef backgroundColor;
+ @property CGFloat cornerRadius;
+ @property CGFloat borderWidth;
+ @property(nullable) CGColorRef borderColor;
+ @property float opacity;
+ @property BOOL allowsGroupOpacity; //在info.plist 文件中可以找到配置，没有默认是no
+ 
+ @property(nullable, strong) id compositingFilter; 组合过滤
+ @property(nullable, copy) NSArray *filters;
+ @property(nullable, copy) NSArray *backgroundFilters;
+ 
+ @property BOOL shouldRasterize; // 就是羽化的大小
+ @property CGFloat rasterizationScale;
+ 
+ @property float shadowOpacity;
+ @property CGSize shadowOffset;
+ @property CGFloat shadowRadius; // 阴影的部分
+ @property(nullable) CGPathRef shadowPath;
+ 
+ Layout methods
+ - (CGSize)preferredFrameSize; （preferredSizeOfLayer）两个方法有关系
+ - (void)setNeedsLayout;
+ - (BOOL)needsLayout;
+ - (void)layoutIfNeeded;
+ - (void)layoutSublayers;
+ + (nullable id<CAAction>)defaultActionForKey:(NSString *)event;
+ - (nullable id<CAAction>)actionForKey:(NSString *)event;
+ 
+ Animation methods.
+ @property(nullable, copy) NSDictionary<NSString *, id<CAAction>> *actions;  映射ACAction接口
+ - (void)addAnimation:(CAAnimation *)anim forKey:(nullable NSString *)key; // 添加动画
+ - (void)removeAllAnimations; // 删除动画
+ - (void)removeAnimationForKey:(NSString *)key;
+ - (nullable NSArray<NSString *> *)animationKeys;
+ - (nullable CAAnimation *)animationForKey:(NSString *)key;
+ 
+ 其他的属性
+ @property(nullable, copy) NSString *name; layer名字
+ @property(nullable, weak) id <CALayerDelegate> delegate; 代理（这个是layer代理，回话等等狡猾）
+ @property(nullable, copy) NSDictionary *style;
+ 
+ @protocol CAAction 也就是CA上面的动作的代理
+ - (void)runActionForKey:(NSString *)event object:(id)anObject arguments:(nullable NSDictionary *)dict;
+ 
+ @protocol CALayerDelegate <NSObject>
+ - (void)displayLayer:(CALayer *)layer; // display() 方法执行
+ - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx;  // drawInContext  这个方法执行的时候就会调用这个代理方法
+ - (void)layerWillDraw:(CALayer *)layer CA_AVAILABLE_STARTING (10.12, 10.0, 10.0, 3.0);
+ - (void)layoutSublayersOfLayer:(CALayer *)layer;  //  -layoutSublayers 检查默认的这个方法，如果代理方法有了，layer Manager中的方法将会忽略掉。也就是执行了和这个方法，layout manager就没有用了。
+ - (nullable id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event; // -actionForKey:  这个方法调用
+ 
+ ** Layer `contentsGravity' values. **
+ CA_EXTERN NSString * const kCAGravityCenter
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityTop
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityBottom
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityLeft
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityRight
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityTopLeft
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityTopRight
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityBottomLeft
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityBottomRight
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityResize
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityResizeAspect
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAGravityResizeAspectFill
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ 
+ contentsFormat
+ CA_EXTERN NSString * const kCAContentsFormatRGBA8Uint ; RGBA UInt8 per component
+ CA_AVAILABLE_STARTING (10.12, 10.0, 10.0, 3.0);
+ CA_EXTERN NSString * const kCAContentsFormatRGBA16Float ; RGBA half-float 16-bit per component
+ CA_AVAILABLE_STARTING (10.12, 10.0, 10.0, 3.0);
+ CA_EXTERN NSString * const kCAContentsFormatGray8Uint ; Grayscale with alpha (if not opaque) UInt8 per component
+ CA_AVAILABLE_STARTING (10.12, 10.0, 10.0, 3.0);
+ 
+ * Contents filter names. *
+ CA_EXTERN NSString * const kCAFilterNearest
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAFilterLinear
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ 
+ CA_EXTERN NSString * const kCAFilterTrilinear
+ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0)；三线过滤
+ 
+ ** Layer event names. **
+ CA_EXTERN NSString * const kCAOnOrderIn
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ CA_EXTERN NSString * const kCAOnOrderOut
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ 
+ ** The animation key used for transitions. **
+ CA_EXTERN NSString * const kCATransition
+ CA_AVAILABLE_STARTING (10.5, 2.0, 9.0, 2.0);
+ 
+ ps: 总结一下；
+ layer的图层的属性，
+ （1）创建和初始化
+ （2）基本属性，插入和删除等操作
+ （3）CALayer 转化
+ （4）基础过滤
+ （5）渲染绘画，布局等等的处理过程（重点），还有就是代理，涉及到了对应的交互性
+ （6）action接口，用于方法的操作
+ （7）动画过程
  
 */
 
