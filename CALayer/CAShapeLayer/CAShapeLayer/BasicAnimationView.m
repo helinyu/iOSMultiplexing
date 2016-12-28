@@ -33,7 +33,8 @@
         _layer=[[CALayer alloc]init];
         _layer.bounds=CGRectMake(0, 0, 10, 20);
         _layer.position=CGPointMake(50, 150);
-        _layer.contents=(id)[UIImage imageNamed:@"petal.png"].CGImage;
+//        _layer.contents=(id)[UIImage imageNamed:@"petal.png"].CGImage;
+        _layer.backgroundColor = [UIColor yellowColor].CGColor;
         [self.layer addSublayer:_layer];
         
         //自定义一个图层用于拉伸
@@ -45,9 +46,11 @@
 }
 
 #pragma mark 移动动画
+
 -(void)translatonAnimation:(CGPoint)location{
-    //1.创建动画并指定动画属性
+    //1.创建动画并指定动画属性 这里的keypath不是随便取的，这里是关于position进行变换的，所以，就会处理这个问题
     CABasicAnimation *basicAnimation=[CABasicAnimation animationWithKeyPath:@"position"];
+    
     basicAnimation.delegate = self;
     //2.设置动画属性初始值和结束值
 //        basicAnimation.fromValue=[NSNumber numberWithInteger:50];//可以不设置，默认为图层初始状态
@@ -115,6 +118,7 @@
     
     CAMediaTimingFunction *timeFouction = [CAMediaTimingFunction functionWithName:@"timeFunction"];
     NSLog(@"time function is ; %@",timeFouction);
+    
 }
 #pragma mark -- did start
 
