@@ -2,15 +2,12 @@
 //  BasicAnimationView.h
 //  CAShapeLayer
 //
-//  Created by felix on 2016/12/27.
+//  Created by felix on 2016/12/28.
 //  Copyright © 2016年 felix. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface BasicAnimationView : UIView
-
--(void)translatonAnimation:(CGPoint)location;// 平移又会回到起点 （default）
--(void)translatonAnimationChanged:(CGPoint)location;  // 平移后留在末端（manual deal with）
+@interface BasicAnimationView : NSObject
 
 @end

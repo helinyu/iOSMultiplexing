@@ -27,7 +27,7 @@
     if (self) {
 //        CGFloat viewWidth = CGRectGetWidth(self.frame);
 //        CGFloat viewHeight = CGRectGetHeight(self.frame);
-    //   添加对应的外面的内容
+//        添加对应的外面的内容
 //        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(20, 20, 80, 80)];
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path moveToPoint:CGPointMake(20, 20)];

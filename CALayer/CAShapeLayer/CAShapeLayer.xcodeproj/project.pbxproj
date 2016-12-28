@@ -18,8 +18,9 @@
 		DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E21E125BEE004CCC4D /* CAShapeLayer+ViewMask.m */; };
 		DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E51E126000004CCC4D /* AudioIconView.m */; };
 		DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E81E126677004CCC4D /* ProgressView.m */; };
-		DC04D7ED1E1278CB004CCC4D /* BasicAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7EC1E1278CB004CCC4D /* BasicAnimationView.m */; };
+		DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */; };
 		DC04D7EF1E127970004CCC4D /* petal.png in Resources */ = {isa = PBXBuildFile; fileRef = DC04D7EE1E127970004CCC4D /* petal.png */; };
+		DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +63,11 @@
 		DC04D7E51E126000004CCC4D /* AudioIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioIconView.m; sourceTree = "<group>"; };
 		DC04D7E71E126677004CCC4D /* ProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressView.h; sourceTree = "<group>"; };
 		DC04D7E81E126677004CCC4D /* ProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressView.m; sourceTree = "<group>"; };
-		DC04D7EB1E1278CB004CCC4D /* BasicAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationView.h; sourceTree = "<group>"; };
-		DC04D7EC1E1278CB004CCC4D /* BasicAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationView.m; sourceTree = "<group>"; };
+		DC04D7EB1E1278CB004CCC4D /* AnimationLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationLayerView.h; sourceTree = "<group>"; };
+		DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationLayerView.m; sourceTree = "<group>"; };
 		DC04D7EE1E127970004CCC4D /* petal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petal.png; sourceTree = "<group>"; };
+		DCFCB4A81E13C6AC0081C591 /* BasicAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationView.h; sourceTree = "<group>"; };
+		DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,8 +168,10 @@
 		DC04D7EA1E1278A4004CCC4D /* animation */ = {
 			isa = PBXGroup;
 			children = (
-				DC04D7EB1E1278CB004CCC4D /* BasicAnimationView.h */,
-				DC04D7EC1E1278CB004CCC4D /* BasicAnimationView.m */,
+				DC04D7EB1E1278CB004CCC4D /* AnimationLayerView.h */,
+				DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */,
+				DCFCB4A81E13C6AC0081C591 /* BasicAnimationView.h */,
+				DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -310,8 +315,9 @@
 			files = (
 				DC04D7B61E125BB1004CCC4D /* ViewController.m in Sources */,
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,
-				DC04D7ED1E1278CB004CCC4D /* BasicAnimationView.m in Sources */,
+				DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */,
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
+				DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */,
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
 				DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */,
 				DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */,
@@ -552,6 +558,7 @@
 				DC04D7DA1E125BB2004CCC4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC04D7DB1E125BB2004CCC4D /* Build configuration list for PBXNativeTarget "CAShapeLayerTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +567,7 @@
 				DC04D7DD1E125BB2004CCC4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC04D7DE1E125BB2004CCC4D /* Build configuration list for PBXNativeTarget "CAShapeLayerUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +576,7 @@
 				DC04D7E01E125BB2004CCC4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
