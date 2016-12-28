@@ -8,3 +8,4 @@ NSMutableData+Helper ： 主要是关于在开发IM的时候，使用二进制�
 
 CALayer/CAShapeLayer ： 关于ShapeLayer 的一个mask view的使用，用于掩界面的实现。运行的结果如下：
 ![CAShapeLayer实现mask view结果](https://github.com/helinyu/iOSMultiplexing/blob/master/CALayer/CAShapeLayer/CAShapeLayer/Snip20161227_1.png)
+BasicAnimationView：这个类是关于基础动画的内容，平移、拉伸（有待实现）等基础动画
