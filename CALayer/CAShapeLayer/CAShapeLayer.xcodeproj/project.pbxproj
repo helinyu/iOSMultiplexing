@@ -23,6 +23,7 @@
 		DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */; };
 		DCFCB4AC1E13CB8E0081C591 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCFCB4AB1E13CB8E0081C591 /* background.jpg */; };
 		DCFCB4AF1E13D8D70081C591 /* KeyFrameAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFCB4AE1E13D8D70081C591 /* KeyFrameAnimationView.m */; };
+		DCFCB4B11E13D9AD0081C591 /* Pasted Graphic 12.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DCFCB4B01E13D9AD0081C591 /* Pasted Graphic 12.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		DCFCB4AB1E13CB8E0081C591 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		DCFCB4AD1E13D8D70081C591 /* KeyFrameAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyFrameAnimationView.h; sourceTree = "<group>"; };
 		DCFCB4AE1E13D8D70081C591 /* KeyFrameAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyFrameAnimationView.m; sourceTree = "<group>"; };
+		DCFCB4B01E13D9AD0081C591 /* Pasted Graphic 12.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "Pasted Graphic 12.tiff"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				DCFCB4AB1E13CB8E0081C591 /* background.jpg */,
+				DCFCB4B01E13D9AD0081C591 /* Pasted Graphic 12.tiff */,
 				DC04D7EE1E127970004CCC4D /* petal.png */,
 				DC04D7AF1E125BB1004CCC4D /* main.m */,
 			);
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFCB4AC1E13CB8E0081C591 /* background.jpg in Resources */,
+				DCFCB4B11E13D9AD0081C591 /* Pasted Graphic 12.tiff in Resources */,
 				DC04D7BE1E125BB1004CCC4D /* LaunchScreen.storyboard in Resources */,
 				DC04D7BB1E125BB1004CCC4D /* Assets.xcassets in Resources */,
 				DC04D7EF1E127970004CCC4D /* petal.png in Resources */,
