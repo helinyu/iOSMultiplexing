@@ -13,3 +13,7 @@ AnimationLayerView：这个类是关于基础动画的内容平移、拉伸（�
 translatonAnimationChanged(method)【这个是因为代理方法stop在隐式动画执行之后】这方法就是用来处理平移之后动画回到起点的到终点的问题（不过好像有问题）怎么处理？涉及到CATransaction
 [一种替代的方法：就是移动结束（经过时间）就删除这个layer，然后在代理方法stop中重新添加这个layer]这里涉及到layer（主要）、一点动画、CATransaction（隐式和显示动画）
 BasicAnimationView 这里面主要是关于BasicAnimation的动画
+媒体时间的使用，就是用于媒体的，例如，动画上的使用；
+属性动画类，是通过属性来改变的动画
+基础动画是继承属性动画
+关键帧动画继承属性动画
