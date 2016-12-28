@@ -33,7 +33,9 @@
 -(void)testBasicAnimation {
     BasicAnimationView *bAView = [[BasicAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:bAView];
-    [bAView translatonAnimation:CGPointMake(300, 300)];
+//    [bAView translatonAnimation:CGPointMake(300, 300)];
+    [bAView translatonAnimationChanged:CGPointMake(300, 300)];
+    
 }
 
 // 绘画进度条

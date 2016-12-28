@@ -10,7 +10,7 @@
 
 @interface BasicAnimationView : UIView
 
--(void)translatonAnimation:(CGPoint)location;
-
+-(void)translatonAnimation:(CGPoint)location;// 平移又会回到起点 （default）
+-(void)translatonAnimationChanged:(CGPoint)location;  // 平移后留在末端（manual deal with）
 
 @end
