@@ -22,4 +22,4 @@ CAPropertyAnimation： 属性动画（基础动画和关键动画都是继承属
 CABasicAnimation： 基础动画只是增加了起点、经过点、终点
 CFTimeInterval ： 媒体时间的使用
 CAValueFunction : 应该是一个值行为（也就是值的属性决定的行为）
-![动画之间的关系](https://github.com/helinyu/iOSMultiplexing/blob/master/CALayer/CAShapeLayer/CAShapeLayer/Pasted%20Graphic%2012.png)
+![动画之间的关系](https://github.com/helinyu/iOSMultiplexing/blob/master/CALayer/CAShapeLayer/CAShapeLayer/Snip20161229_2.png)
