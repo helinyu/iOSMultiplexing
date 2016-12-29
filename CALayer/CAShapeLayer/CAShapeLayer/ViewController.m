@@ -15,6 +15,7 @@
 #import "KeyFrameAnimationView.h"
 #import "SpringAnimationView.h"
 #import "GroupAnimationView.h"
+#import "TransitionView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -35,7 +36,13 @@
 //    [self testKeyFrameAnimation];
 //    [self testSpringAnimation];
 //    [self testUIViewAnimaiton];
-    [self testGroupAnimation];
+//    [self testGroupAnimation];
+    [self testTrainsition];
+}
+
+- (void)testTrainsition {
+    TransitionView *tsView = [[TransitionView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:tsView];
 }
 
 - (void)testGroupAnimation {
