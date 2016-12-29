@@ -10,4 +10,5 @@
 
 @interface KeyFrameAnimationView : UIView
 
+//- (instancetype)initWithFrame:(CGRect)frame ;
 @end

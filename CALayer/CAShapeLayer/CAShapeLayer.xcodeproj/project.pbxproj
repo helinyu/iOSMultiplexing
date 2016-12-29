@@ -20,7 +20,10 @@
 		DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E81E126677004CCC4D /* ProgressView.m */; };
 		DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */; };
 		DC04D7EF1E127970004CCC4D /* petal.png in Resources */ = {isa = PBXBuildFile; fileRef = DC04D7EE1E127970004CCC4D /* petal.png */; };
-		DCB574E01E149F38004CAB95 /* Snip20161229_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574DF1E149F38004CAB95 /* Snip20161229_2.png */; };
+		DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */; };
+		DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */; };
+		DCB574E71E14BA8E004CAB95 /* Snip20161229_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E61E14BA8E004CAB95 /* Snip20161229_2.png */; };
+		DCB574EA1E14BE14004CAB95 /* GroupAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB574E91E14BE14004CAB95 /* GroupAnimationView.m */; };
 		DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */; };
 		DCFCB4AC1E13CB8E0081C591 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCFCB4AB1E13CB8E0081C591 /* background.jpg */; };
 		DCFCB4AF1E13D8D70081C591 /* KeyFrameAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFCB4AE1E13D8D70081C591 /* KeyFrameAnimationView.m */; };
@@ -69,7 +72,12 @@
 		DC04D7EB1E1278CB004CCC4D /* AnimationLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationLayerView.h; sourceTree = "<group>"; };
 		DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationLayerView.m; sourceTree = "<group>"; };
 		DC04D7EE1E127970004CCC4D /* petal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petal.png; sourceTree = "<group>"; };
-		DCB574DF1E149F38004CAB95 /* Snip20161229_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161229_2.png; sourceTree = "<group>"; };
+		DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kwyFrameAnimationModel.png; sourceTree = "<group>"; };
+		DCB574E31E14B0AD004CAB95 /* SpringAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringAnimationView.h; sourceTree = "<group>"; };
+		DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringAnimationView.m; sourceTree = "<group>"; };
+		DCB574E61E14BA8E004CAB95 /* Snip20161229_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161229_2.png; sourceTree = "<group>"; };
+		DCB574E81E14BE14004CAB95 /* GroupAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupAnimationView.h; sourceTree = "<group>"; };
+		DCB574E91E14BE14004CAB95 /* GroupAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupAnimationView.m; sourceTree = "<group>"; };
 		DCFCB4A81E13C6AC0081C591 /* BasicAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationView.h; sourceTree = "<group>"; };
 		DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationView.m; sourceTree = "<group>"; };
 		DCFCB4AB1E13CB8E0081C591 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -148,8 +156,9 @@
 		DC04D7AE1E125BB1004CCC4D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */,
 				DCFCB4AB1E13CB8E0081C591 /* background.jpg */,
-				DCB574DF1E149F38004CAB95 /* Snip20161229_2.png */,
+				DCB574E61E14BA8E004CAB95 /* Snip20161229_2.png */,
 				DC04D7EE1E127970004CCC4D /* petal.png */,
 				DC04D7AF1E125BB1004CCC4D /* main.m */,
 			);
@@ -177,12 +186,16 @@
 		DC04D7EA1E1278A4004CCC4D /* animation */ = {
 			isa = PBXGroup;
 			children = (
+				DCB574E81E14BE14004CAB95 /* GroupAnimationView.h */,
+				DCB574E91E14BE14004CAB95 /* GroupAnimationView.m */,
 				DC04D7EB1E1278CB004CCC4D /* AnimationLayerView.h */,
 				DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */,
 				DCFCB4A81E13C6AC0081C591 /* BasicAnimationView.h */,
 				DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */,
 				DCFCB4AD1E13D8D70081C591 /* KeyFrameAnimationView.h */,
 				DCFCB4AE1E13D8D70081C591 /* KeyFrameAnimationView.m */,
+				DCB574E31E14B0AD004CAB95 /* SpringAnimationView.h */,
+				DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -297,11 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFCB4AC1E13CB8E0081C591 /* background.jpg in Resources */,
+				DCB574E71E14BA8E004CAB95 /* Snip20161229_2.png in Resources */,
 				DC04D7BE1E125BB1004CCC4D /* LaunchScreen.storyboard in Resources */,
 				DC04D7BB1E125BB1004CCC4D /* Assets.xcassets in Resources */,
+				DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */,
 				DC04D7EF1E127970004CCC4D /* petal.png in Resources */,
 				DC04D7B91E125BB1004CCC4D /* Main.storyboard in Resources */,
-				DCB574E01E149F38004CAB95 /* Snip20161229_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +346,10 @@
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
 				DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */,
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
+				DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */,
 				DCFCB4AF1E13D8D70081C591 /* KeyFrameAnimationView.m in Sources */,
 				DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */,
+				DCB574EA1E14BE14004CAB95 /* GroupAnimationView.m in Sources */,
 				DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

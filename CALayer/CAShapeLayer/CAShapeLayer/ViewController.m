@@ -12,6 +12,8 @@
 #import "ProgressView.h"
 #import "AnimationLayerView.h"
 #import "BasicAnimationView.h"
+#import "KeyFrameAnimationView.h"
+#import "SpringAnimationView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -28,8 +30,31 @@
 //    [self test1] ;
 //    [self test2];
 //    [self testAnimationLayerView];
-    [self testBasicAnimationView];
+//    [self testBasicAnimationView];
+//    [self testKeyFrameAnimation];
+//    [self testSpringAnimation];
+    [self testUIViewAnimaiton];
+}
 
+
+// UIView层的动画 （关于动画的内容，还有其他方法）
+- (void)testUIViewAnimaiton {
+    [UIView animateWithDuration:3.0 delay:1.0 usingSpringWithDamping:1.0f initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.view.alpha = 0; //浑浊度发生了变化
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void)testSpringAnimation {
+    SpringAnimationView *springAView = [[SpringAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:springAView];
+}
+
+/// test key frame aniamtion
+- (void)testKeyFrameAnimation {
+    KeyFrameAnimationView *keyFrameAView =[[KeyFrameAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:keyFrameAView];
 }
 
 // test basic animation with rotation and so on
