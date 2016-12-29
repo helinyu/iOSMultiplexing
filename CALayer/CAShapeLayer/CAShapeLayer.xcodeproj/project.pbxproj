@@ -28,6 +28,7 @@
 		DCB574F11E14CE0A004CAB95 /* Snip20161229_0.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574EE1E14CE0A004CAB95 /* Snip20161229_0.png */; };
 		DCB574F21E14CE0A004CAB95 /* Snip20161229_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574EF1E14CE0A004CAB95 /* Snip20161229_1.png */; };
 		DCB574F31E14CE0A004CAB95 /* Snip20161229_3.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574F01E14CE0A004CAB95 /* Snip20161229_3.png */; };
+		DCB574F61E14D218004CAB95 /* FrameByFrameAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB574F51E14D218004CAB95 /* FrameByFrameAnimationView.m */; };
 		DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */; };
 		DCFCB4AC1E13CB8E0081C591 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCFCB4AB1E13CB8E0081C591 /* background.jpg */; };
 		DCFCB4AF1E13D8D70081C591 /* KeyFrameAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFCB4AE1E13D8D70081C591 /* KeyFrameAnimationView.m */; };
@@ -87,6 +88,8 @@
 		DCB574EE1E14CE0A004CAB95 /* Snip20161229_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161229_0.png; sourceTree = "<group>"; };
 		DCB574EF1E14CE0A004CAB95 /* Snip20161229_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161229_1.png; sourceTree = "<group>"; };
 		DCB574F01E14CE0A004CAB95 /* Snip20161229_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161229_3.png; sourceTree = "<group>"; };
+		DCB574F41E14D218004CAB95 /* FrameByFrameAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameByFrameAnimationView.h; sourceTree = "<group>"; };
+		DCB574F51E14D218004CAB95 /* FrameByFrameAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameByFrameAnimationView.m; sourceTree = "<group>"; };
 		DCFCB4A81E13C6AC0081C591 /* BasicAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationView.h; sourceTree = "<group>"; };
 		DCFCB4A91E13C6AC0081C591 /* BasicAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationView.m; sourceTree = "<group>"; };
 		DCFCB4AB1E13CB8E0081C591 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
@@ -210,6 +213,8 @@
 				DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */,
 				DCB574EB1E14C401004CAB95 /* TransitionView.h */,
 				DCB574EC1E14C401004CAB95 /* TransitionView.m */,
+				DCB574F41E14D218004CAB95 /* FrameByFrameAnimationView.h */,
+				DCB574F51E14D218004CAB95 /* FrameByFrameAnimationView.m */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
 				DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */,
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
+				DCB574F61E14D218004CAB95 /* FrameByFrameAnimationView.m in Sources */,
 				DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */,
 				DCFCB4AF1E13D8D70081C591 /* KeyFrameAnimationView.m in Sources */,
 				DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */,

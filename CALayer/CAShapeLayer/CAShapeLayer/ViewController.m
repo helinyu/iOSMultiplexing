@@ -16,6 +16,7 @@
 #import "SpringAnimationView.h"
 #import "GroupAnimationView.h"
 #import "TransitionView.h"
+#import "FrameByFrameAnimationView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -37,9 +38,16 @@
 //    [self testSpringAnimation];
 //    [self testUIViewAnimaiton];
 //    [self testGroupAnimation];
-    [self testTrainsition];
+//    [self testTrainsition];
+    [self testFrameByFrame];
 }
 
+- (void)testFrameByFrame {
+    FrameByFrameAnimationView *fbfAnimationView = [[FrameByFrameAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:fbfAnimationView];
+}
+
+// 转场动画
 - (void)testTrainsition {
     TransitionView *tsView = [[TransitionView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:tsView];
