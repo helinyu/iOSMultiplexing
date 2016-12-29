@@ -36,3 +36,7 @@ GroupAnimationView : 关于组动画，就是讲基础动画或者关键动画�
 
 TransitionView: 转场动画，可以用于实现轮播图片转场的时候的结果。
 PS: 上面的方法其实可以分为两类：将组合动画规划到属性动画中。
+
+http://www.cnblogs.com/kenshincui/p/3972100.html 
+动画上涉及到的参考链接
+
