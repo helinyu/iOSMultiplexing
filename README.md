@@ -27,3 +27,7 @@ CFTimeInterval ： 媒体时间的使用
 
 CAValueFunction : 应该是一个值行为（也就是值的属性决定的行为）
 ![动画之间的关系](https://github.com/helinyu/iOSMultiplexing/blob/master/CALayer/CAShapeLayer/CAShapeLayer/Snip20161229_2.png)
+
+SpringAimationView : 这个类是关于弹簧动画的类；
+
+testUIViewAnimaiton：笔记还记录了关于UIView上的一些动画，就是UIView上的一些简单初步的动画是可以在View上直接就实现了的。
