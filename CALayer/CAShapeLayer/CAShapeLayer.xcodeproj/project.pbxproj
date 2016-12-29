@@ -20,6 +20,8 @@
 		DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E81E126677004CCC4D /* ProgressView.m */; };
 		DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */; };
 		DC04D7EF1E127970004CCC4D /* petal.png in Resources */ = {isa = PBXBuildFile; fileRef = DC04D7EE1E127970004CCC4D /* petal.png */; };
+		DC226FB01E14EF9500BF6951 /* CustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FAF1E14EF9500BF6951 /* CustomLayer.m */; };
+		DC226FB41E1508D200BF6951 /* ShareLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FB31E1508D200BF6951 /* ShareLayerView.m */; };
 		DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */; };
 		DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */; };
 		DCB574E71E14BA8E004CAB95 /* Snip20161229_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E61E14BA8E004CAB95 /* Snip20161229_2.png */; };
@@ -77,6 +79,10 @@
 		DC04D7EB1E1278CB004CCC4D /* AnimationLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationLayerView.h; sourceTree = "<group>"; };
 		DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationLayerView.m; sourceTree = "<group>"; };
 		DC04D7EE1E127970004CCC4D /* petal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petal.png; sourceTree = "<group>"; };
+		DC226FAE1E14EF9500BF6951 /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
+		DC226FAF1E14EF9500BF6951 /* CustomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayer.m; sourceTree = "<group>"; };
+		DC226FB21E1508D100BF6951 /* ShareLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareLayerView.h; sourceTree = "<group>"; };
+		DC226FB31E1508D200BF6951 /* ShareLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareLayerView.m; sourceTree = "<group>"; };
 		DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kwyFrameAnimationModel.png; sourceTree = "<group>"; };
 		DCB574E31E14B0AD004CAB95 /* SpringAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringAnimationView.h; sourceTree = "<group>"; };
 		DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringAnimationView.m; sourceTree = "<group>"; };
@@ -145,9 +151,8 @@
 		DC04D7AD1E125BB1004CCC4D /* CAShapeLayer */ = {
 			isa = PBXGroup;
 			children = (
+				DC226FB11E15049300BF6951 /* quartzCore_Layer */,
 				DC04D7EA1E1278A4004CCC4D /* animation */,
-				DC04D7E11E125BEE004CCC4D /* CAShapeLayer+ViewMask.h */,
-				DC04D7E21E125BEE004CCC4D /* CAShapeLayer+ViewMask.m */,
 				DC04D7E41E126000004CCC4D /* AudioIconView.h */,
 				DC04D7E51E126000004CCC4D /* AudioIconView.m */,
 				DC04D7E71E126677004CCC4D /* ProgressView.h */,
@@ -161,6 +166,8 @@
 				DC04D7BC1E125BB1004CCC4D /* LaunchScreen.storyboard */,
 				DC04D7BF1E125BB1004CCC4D /* Info.plist */,
 				DC04D7AE1E125BB1004CCC4D /* Supporting Files */,
+				DC226FAE1E14EF9500BF6951 /* CustomLayer.h */,
+				DC226FAF1E14EF9500BF6951 /* CustomLayer.m */,
 			);
 			path = CAShapeLayer;
 			sourceTree = "<group>";
@@ -217,6 +224,17 @@
 				DCB574F51E14D218004CAB95 /* FrameByFrameAnimationView.m */,
 			);
 			name = animation;
+			sourceTree = "<group>";
+		};
+		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
+			isa = PBXGroup;
+			children = (
+				DC04D7E11E125BEE004CCC4D /* CAShapeLayer+ViewMask.h */,
+				DC04D7E21E125BEE004CCC4D /* CAShapeLayer+ViewMask.m */,
+				DC226FB21E1508D100BF6951 /* ShareLayerView.h */,
+				DC226FB31E1508D200BF6951 /* ShareLayerView.m */,
+			);
+			name = quartzCore_Layer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,12 +384,14 @@
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,
 				DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */,
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
+				DC226FB41E1508D200BF6951 /* ShareLayerView.m in Sources */,
 				DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */,
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
 				DCB574F61E14D218004CAB95 /* FrameByFrameAnimationView.m in Sources */,
 				DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */,
 				DCFCB4AF1E13D8D70081C591 /* KeyFrameAnimationView.m in Sources */,
 				DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */,
+				DC226FB01E14EF9500BF6951 /* CustomLayer.m in Sources */,
 				DCB574ED1E14C401004CAB95 /* TransitionView.m in Sources */,
 				DCB574EA1E14BE14004CAB95 /* GroupAnimationView.m in Sources */,
 				DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */,

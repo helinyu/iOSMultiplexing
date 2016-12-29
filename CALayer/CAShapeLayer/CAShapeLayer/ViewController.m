@@ -17,6 +17,7 @@
 #import "GroupAnimationView.h"
 #import "TransitionView.h"
 #import "FrameByFrameAnimationView.h"
+#import "ShareLayerView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -39,9 +40,17 @@
 //    [self testUIViewAnimaiton];
 //    [self testGroupAnimation];
 //    [self testTrainsition];
-    [self testFrameByFrame];
+//    [self testFrameByFrame];
+    [self testShapeLayer];
 }
 
+// 绘画形状的layer
+- (void)testShapeLayer {
+    ShareLayerView *slView = [[ShareLayerView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:slView];
+}
+
+// 逐帧动画
 - (void)testFrameByFrame {
     FrameByFrameAnimationView *fbfAnimationView = [[FrameByFrameAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:fbfAnimationView];
