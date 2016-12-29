@@ -14,12 +14,16 @@ translatonAnimationChanged(method)【这个是因为代理方法stop在隐式动
 [一种替代的方法：就是移动结束（经过时间）就删除这个layer，然后在代理方法stop中重新添加这个layer]这里涉及到layer（主要）、一点动画、CATransaction（隐式和显示动画）
 
 BasicAnimationView 这里面主要是关于BasicAnimation的动画
-媒体时间的使用，就是用于媒体的，例如，动画上的使用；
+
+媒体时间的使用，就是用于媒体的，例如，动画上的使用;
+
 属性动画类，是通过属性来改变属性的动画
-基础动画是继承属性动画
-关键帧动画继承属性动画
+
 CAPropertyAnimation： 属性动画（基础动画和关键动画都是继承属性动画）
+
 CABasicAnimation： 基础动画只是增加了起点、经过点、终点
+
 CFTimeInterval ： 媒体时间的使用
+
 CAValueFunction : 应该是一个值行为（也就是值的属性决定的行为）
-![动画之间的关系](https://github.com/helinyu/iOSMultiplexing/blob/master/CALayer/CAShapeLayer/CAShapeLayer/Pasted%20Graphic%2012.png)
+![动画之间的关系](https://github.com/helinyu/iOSMultiplexing/blob/master/CALayer/CAShapeLayer/CAShapeLayer/Snip20161229_2.png)
