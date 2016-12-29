@@ -33,3 +33,6 @@ SpringAimationView : 这个类是关于弹簧动画的类；
 testUIViewAnimaiton：笔记还记录了关于UIView上的一些动画，就是UIView上的一些简单初步的动画是可以在View上直接就实现了的。
 
 GroupAnimationView : 关于组动画，就是讲基础动画或者关键动画添加到animations里面，就形成了组动画。
+
+TransitionView: 转场动画，可以用于实现轮播图片转场的时候的结果。
+PS: 上面的方法其实可以分为两类：将组合动画规划到属性动画中。
