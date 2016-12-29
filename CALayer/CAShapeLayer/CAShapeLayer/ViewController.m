@@ -14,6 +14,7 @@
 #import "BasicAnimationView.h"
 #import "KeyFrameAnimationView.h"
 #import "SpringAnimationView.h"
+#import "GroupAnimationView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -33,7 +34,13 @@
 //    [self testBasicAnimationView];
 //    [self testKeyFrameAnimation];
 //    [self testSpringAnimation];
-    [self testUIViewAnimaiton];
+//    [self testUIViewAnimaiton];
+    [self testGroupAnimation];
+}
+
+- (void)testGroupAnimation {
+    GroupAnimationView *gaView = [[GroupAnimationView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.view addSubview:gaView];
 }
 
 
