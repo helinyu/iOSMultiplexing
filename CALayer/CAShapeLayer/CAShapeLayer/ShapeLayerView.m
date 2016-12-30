@@ -160,7 +160,53 @@ const CGFloat PistionY = 100.0f;
 //    self.progressLayer.strokeEnd = 1.0f;
 //    [CATransaction setDisableActions:NO];
 //    [CATransaction commit];
-    
+
 }
 
 @end
+
+/*
+
+CAShapeLayer ： 这个类是关于绘制图形的图层；
+和UIBizerPath有很强的关系，也就是有关的内容；（通过贝塞尔曲线来绘制对应的曲线内容）
+ @property(nullable) CGPathRef path; // 绘制的路径
+ @property(nullable) CGColorRef fillColor; // 填充的颜色，空缺就会填充
+ @property(copy) NSString *fillRule; // 填充路径的规则
+ CA_EXTERN NSString *const kCAFillRuleNonZero
+ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+ CA_EXTERN NSString *const kCAFillRuleEvenOdd
+ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+ 
+ @property(nullable) CGColorRef strokeColor; // 插入颜色【彩色】（而不是填充）【注意插入颜色和填充颜色的区别】
+ 
+ @property CGFloat strokeStart; // 彩色的开始
+ @property CGFloat strokeEnd;  // 彩色的结束
+ 
+ @property CGFloat lineWidth; // 线条的宽度
+ 
+ @property CGFloat miterLimit; // 路径上衔接的处理
+ 
+ @property(copy) NSString *lineCap; // 选装的角度
+CA_EXTERN NSString *const kCALineCapButt
+CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+CA_EXTERN NSString *const kCALineCapRound
+CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+CA_EXTERN NSString *const kCALineCapSquare
+CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+ 
+ @property(copy) NSString *lineJoin; // 线条的拼接
+  CA_EXTERN NSString *const kCALineJoinMiter
+ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+ CA_EXTERN NSString *const kCALineJoinRound
+ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+ CA_EXTERN NSString *const kCALineJoinBevel
+ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
+ 
+ @property CGFloat lineDashPhase; //默认是0
+ @property(nullable, copy) NSArray<NSNumber *> *lineDashPattern;
+ 
+ https://zsisme.gitbooks.io/ios-/content/chapter6/cashapelayer.html
+ 参考的链接
+ 
+
+*/

@@ -20,6 +20,10 @@
 		DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E81E126677004CCC4D /* ProgressView.m */; };
 		DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */; };
 		DC04D7EF1E127970004CCC4D /* petal.png in Resources */ = {isa = PBXBuildFile; fileRef = DC04D7EE1E127970004CCC4D /* petal.png */; };
+		DC1B092E1E161E96002E6825 /* Snip20161230_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1B092D1E161E96002E6825 /* Snip20161230_1.png */; };
+		DC1B09321E161EA3002E6825 /* CAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B09301E161EA3002E6825 /* CAViewController.m */; };
+		DC1B09331E161EA3002E6825 /* CAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1B09311E161EA3002E6825 /* CAViewController.xib */; };
+		DC1B09531E162DF8002E6825 /* ShapeLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B09521E162DF8002E6825 /* ShapeLayerController.m */; };
 		DC226FB01E14EF9500BF6951 /* CustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FAF1E14EF9500BF6951 /* CustomLayer.m */; };
 		DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FB31E1508D200BF6951 /* ShapeLayerView.m */; };
 		DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */; };
@@ -79,6 +83,12 @@
 		DC04D7EB1E1278CB004CCC4D /* AnimationLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationLayerView.h; sourceTree = "<group>"; };
 		DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationLayerView.m; sourceTree = "<group>"; };
 		DC04D7EE1E127970004CCC4D /* petal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petal.png; sourceTree = "<group>"; };
+		DC1B092D1E161E96002E6825 /* Snip20161230_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161230_1.png; sourceTree = "<group>"; };
+		DC1B092F1E161EA3002E6825 /* CAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAViewController.h; sourceTree = "<group>"; };
+		DC1B09301E161EA3002E6825 /* CAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAViewController.m; sourceTree = "<group>"; };
+		DC1B09311E161EA3002E6825 /* CAViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CAViewController.xib; sourceTree = "<group>"; };
+		DC1B09511E162DF8002E6825 /* ShapeLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeLayerController.h; sourceTree = "<group>"; };
+		DC1B09521E162DF8002E6825 /* ShapeLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeLayerController.m; sourceTree = "<group>"; };
 		DC226FAE1E14EF9500BF6951 /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
 		DC226FAF1E14EF9500BF6951 /* CustomLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayer.m; sourceTree = "<group>"; };
 		DC226FB21E1508D100BF6951 /* ShapeLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeLayerView.h; sourceTree = "<group>"; };
@@ -226,13 +236,27 @@
 			name = animation;
 			sourceTree = "<group>";
 		};
-		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
+		DC1B09501E162DE5002E6825 /* CAShapeLayer */ = {
 			isa = PBXGroup;
 			children = (
 				DC04D7E11E125BEE004CCC4D /* CAShapeLayer+ViewMask.h */,
 				DC04D7E21E125BEE004CCC4D /* CAShapeLayer+ViewMask.m */,
 				DC226FB21E1508D100BF6951 /* ShapeLayerView.h */,
 				DC226FB31E1508D200BF6951 /* ShapeLayerView.m */,
+				DC1B09511E162DF8002E6825 /* ShapeLayerController.h */,
+				DC1B09521E162DF8002E6825 /* ShapeLayerController.m */,
+				DC1B092D1E161E96002E6825 /* Snip20161230_1.png */,
+			);
+			name = CAShapeLayer;
+			sourceTree = "<group>";
+		};
+		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
+			isa = PBXGroup;
+			children = (
+				DC1B09501E162DE5002E6825 /* CAShapeLayer */,
+				DC1B092F1E161EA3002E6825 /* CAViewController.h */,
+				DC1B09301E161EA3002E6825 /* CAViewController.m */,
+				DC1B09311E161EA3002E6825 /* CAViewController.xib */,
 			);
 			name = quartzCore_Layer;
 			sourceTree = "<group>";
@@ -351,7 +375,9 @@
 				DCB574F21E14CE0A004CAB95 /* Snip20161229_1.png in Resources */,
 				DCB574E71E14BA8E004CAB95 /* Snip20161229_2.png in Resources */,
 				DCB574F11E14CE0A004CAB95 /* Snip20161229_0.png in Resources */,
+				DC1B09331E161EA3002E6825 /* CAViewController.xib in Resources */,
 				DC04D7BE1E125BB1004CCC4D /* LaunchScreen.storyboard in Resources */,
+				DC1B092E1E161E96002E6825 /* Snip20161230_1.png in Resources */,
 				DC04D7BB1E125BB1004CCC4D /* Assets.xcassets in Resources */,
 				DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */,
 				DC04D7EF1E127970004CCC4D /* petal.png in Resources */,
@@ -383,6 +409,8 @@
 				DC04D7B61E125BB1004CCC4D /* ViewController.m in Sources */,
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,
 				DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */,
+				DC1B09531E162DF8002E6825 /* ShapeLayerController.m in Sources */,
+				DC1B09321E161EA3002E6825 /* CAViewController.m in Sources */,
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
 				DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */,
 				DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */,

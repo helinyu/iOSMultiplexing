@@ -18,6 +18,7 @@
 #import "TransitionView.h"
 #import "FrameByFrameAnimationView.h"
 #import "ShapeLayerView.h"
+#import "CAViewController.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -41,7 +42,14 @@
 //    [self testGroupAnimation];
 //    [self testTrainsition];
 //    [self testFrameByFrame];
-    [self testShapeLayer];
+//    [self testShapeLayer];
+    [self toCAViewController];
+}
+
+- (void)toCAViewController {
+//    CAViewController *vc = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CAViewController class]) owner:self options:nil] lastObject];
+    CAViewController *vc = [[CAViewController alloc] initWithNibName:NSStringFromClass([CAViewController class]) bundle:nil];
+    [self.navigationController pushViewController:vc animated:true];
 }
 
 // 绘画形状的layer
