@@ -8,6 +8,8 @@
 
 #import "CAViewController.h"
 #import "ShapeLayerController.h"
+#import "TiledLayerController.h"
+
 
 @interface CAViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -31,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dataSources = @[@"CAShapeLayer"];
+    _dataSources = @[@"CAShapeLayer",@"TiledLayer"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -51,6 +53,7 @@
 }
 
 #pragma mark -- delegate 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case 0:
@@ -58,6 +61,13 @@
             ShapeLayerController *slVC = [[ShapeLayerController alloc] init];
             slVC.navigationItem.title = _dataSources[indexPath.row];
             [self.navigationController pushViewController:slVC animated:true];
+        }
+            break;
+        case 1:
+        {
+            TiledLayerController *tlVC = [TiledLayerController new];
+            tlVC.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:tlVC animated:true];
         }
             break;
         default:

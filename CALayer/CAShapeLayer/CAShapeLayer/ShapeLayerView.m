@@ -144,7 +144,7 @@ const CGFloat PistionY = 100.0f;
 /* Called when the animation begins its active duration. */
 
 - (void)animationDidStart:(CAAnimation *)anim {
-    NSLog(@"animationDidStart");
+//    NSLog(@"animationDidStart");
 }
 
 /* Called when the animation either completes its active duration or
@@ -207,6 +207,9 @@ CA_AVAILABLE_STARTING (10.6, 3.0, 9.0, 2.0);
  
  https://zsisme.gitbooks.io/ios-/content/chapter6/cashapelayer.html
  参考的链接
+ 
+ CAShapeLayer是一个通过矢量图形而不是bitmap来绘制的图层子类。 
+ 也即是-矢量而不是标量像素的内容
  
 
 */
