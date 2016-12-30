@@ -17,7 +17,7 @@
 #import "GroupAnimationView.h"
 #import "TransitionView.h"
 #import "FrameByFrameAnimationView.h"
-#import "ShareLayerView.h"
+#import "ShapeLayerView.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -46,7 +46,7 @@
 
 // 绘画形状的layer
 - (void)testShapeLayer {
-    ShareLayerView *slView = [[ShareLayerView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    ShapeLayerView *slView = [[ShapeLayerView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:slView];
 }
 

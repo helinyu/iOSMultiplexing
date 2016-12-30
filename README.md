@@ -41,3 +41,5 @@ FrameByFrameAnimationView： 这个类是关于逐帧动画的内容；CADisplay
 
 http://www.cnblogs.com/kenshincui/p/3972100.html 
 动画上涉及到的参考链接
+
+ShapeLayerView : 这个类是实现了视频录制里面的动画内容，这个CAShapeLayer 是用来回话形状的。

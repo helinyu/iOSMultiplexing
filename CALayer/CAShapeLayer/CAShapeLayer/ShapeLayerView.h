@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShareLayerView : UIView
+@interface ShapeLayerView : UIView
 
 @end

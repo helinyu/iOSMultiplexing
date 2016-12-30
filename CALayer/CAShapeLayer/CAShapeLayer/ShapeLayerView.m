@@ -6,9 +6,9 @@
 //  Copyright © 2016年 felix. All rights reserved.
 //
 
-#import "ShareLayerView.h"
+#import "ShapeLayerView.h"
 
-@interface ShareLayerView()<CAAnimationDelegate>
+@interface ShapeLayerView()<CAAnimationDelegate>
 {
     UIBezierPath    *_path;
 }
@@ -21,7 +21,7 @@
 const CGFloat LayerHeight = 20.0f;
 const CGFloat PistionY = 100.0f;
 
-@implementation ShareLayerView
+@implementation ShapeLayerView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
