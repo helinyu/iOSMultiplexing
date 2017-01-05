@@ -89,8 +89,28 @@ PS:
  
  (如果性能比哪个高的话，为什么要使用UIlabel呢？直接使用textLayer就可以了？)
  
- 
 这里面应该在DTcoreText上也会使用功能到的内容可以进行查看，种类应该也是用于系那是头像等等特殊的字符，图片相当于文字显示。
+ */
+
+#pragma mark -- 闺蜜圈项目中所使用到的字体进行旋转
+/*
  
+ CATextLayer *textLayer = [CATextLayer layer];
+ textLayer.frame = self.cornerScriptView.bounds;
+ self.cornerScriptView.layer.masksToBounds = YES;
+ [self.cornerScriptView.layer addSublayer:textLayer];
+ 
+ textLayer.foregroundColor = [UIColor whiteColor].CGColor;
+ UIFont *font = [UIFont boldSystemFontOfSize:11.0];
+ CFStringRef fontName = (__bridge CFStringRef)font.fontName;
+ CGFontRef fontRef = CGFontCreateWithFontName(fontName);
+ textLayer.font = fontRef;
+ textLayer.fontSize = font.pointSize;
+ CGFontRelease(fontRef);
+ textLayer.transform = CATransform3DMakeRotation(M_PI / 4, 0, 0, 1);
+ textLayer.contentsScale = [UIScreen mainScreen].scale;
+ textLayer.string = info.sLabel;
+ textLayer.alignmentMode = kCAAlignmentCenter;
+
  
  */

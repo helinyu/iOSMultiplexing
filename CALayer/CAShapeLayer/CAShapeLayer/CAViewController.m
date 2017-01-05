@@ -11,6 +11,7 @@
 #import "TiledLayerController.h"
 #import "TextLayerController.h"
 #import "EAGLLayerViewController.h"
+#import "AVPlayerLayerController.h"
 
 
 @interface CAViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -35,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dataSources = @[@"CAShapeLayer",@"TiledLayer",@"TextLayer",@"CAEAGLLayer"];
+    _dataSources = @[@"CAShapeLayer",@"TiledLayer",@"TextLayer",@"CAEAGLLayer",@"AVPlayerLayer"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -82,6 +83,13 @@
         case 3:
         {
             EAGLLayerViewController *tlVC = [EAGLLayerViewController new];
+            tlVC.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:tlVC animated:true];
+        }
+            break;
+        case 4:
+        {
+            AVPlayerLayerController *tlVC = [AVPlayerLayerController new];
             tlVC.navigationItem.title = _dataSources[indexPath.row];
             [self.navigationController pushViewController:tlVC animated:true];
         }

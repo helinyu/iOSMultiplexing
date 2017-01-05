@@ -47,3 +47,6 @@ ShapeLayerView : 这个类是实现了视频录制里面的动画内容，这个
 CATiledLayer : 这个平铺的内容是关于如何进行处理的，也就是一个块块的接起来的；
 
 TextLayerController : 这个是用于显示文字的layer
+
+AVPlayerLayer ： 用来显示视频的播放的，并且是在AVFoundation这个库里面的
+
