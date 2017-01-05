@@ -50,3 +50,5 @@ TextLayerController : 这个是用于显示文字的layer
 
 AVPlayerLayer ： 用来显示视频的播放的，并且是在AVFoundation这个库里面的
 
+CAGradientLayer: 一个渐变色的Layer的内容 ，用于显示渐变色，这个苹果官方使用了渐变色进行渲染了
+

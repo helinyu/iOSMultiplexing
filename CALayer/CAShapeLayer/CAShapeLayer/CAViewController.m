@@ -12,6 +12,8 @@
 #import "TextLayerController.h"
 #import "EAGLLayerViewController.h"
 #import "AVPlayerLayerController.h"
+#import "TransformLayerController.h"
+#import "GradientLayerController.h"
 
 
 @interface CAViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -36,7 +38,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dataSources = @[@"CAShapeLayer",@"TiledLayer",@"TextLayer",@"CAEAGLLayer",@"AVPlayerLayer"];
+    _dataSources = @[@"CAShapeLayer",@"TiledLayer",@"TextLayer",@"CAEAGLLayer",@"AVPlayerLayer",@"CATransformLayer",@"CAGradientLayer"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -90,6 +92,20 @@
         case 4:
         {
             AVPlayerLayerController *tlVC = [AVPlayerLayerController new];
+            tlVC.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:tlVC animated:true];
+        }
+            break;
+        case 5:
+        {
+            TransformLayerController *tlVC = [TransformLayerController new];
+            tlVC.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:tlVC animated:true];
+        }
+            break;
+        case 6:
+        {
+            GradientLayerController *tlVC = [GradientLayerController new];
             tlVC.navigationItem.title = _dataSources[indexPath.row];
             [self.navigationController pushViewController:tlVC animated:true];
         }

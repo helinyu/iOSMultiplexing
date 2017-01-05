@@ -70,6 +70,8 @@
 		DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FB31E1508D200BF6951 /* ShapeLayerView.m */; };
 		DC425E6D1E1E50F500875FBF /* AVPlayerLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC425E6C1E1E50F500875FBF /* AVPlayerLayerController.m */; };
 		DC425E6F1E1E52FE00875FBF /* test0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DC425E6E1E1E52FE00875FBF /* test0.mp4 */; };
+		DC4C0EBA1E1E5D2F001F8398 /* TransformLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4C0EB91E1E5D2F001F8398 /* TransformLayerController.m */; };
+		DC4C0EBE1E1E6A72001F8398 /* GradientLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4C0EBD1E1E6A72001F8398 /* GradientLayerController.m */; };
 		DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */; };
 		DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */; };
 		DCB574E71E14BA8E004CAB95 /* Snip20161229_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E61E14BA8E004CAB95 /* Snip20161229_2.png */; };
@@ -184,6 +186,10 @@
 		DC425E6B1E1E50F500875FBF /* AVPlayerLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerLayerController.h; sourceTree = "<group>"; };
 		DC425E6C1E1E50F500875FBF /* AVPlayerLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerLayerController.m; sourceTree = "<group>"; };
 		DC425E6E1E1E52FE00875FBF /* test0.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = test0.mp4; sourceTree = "<group>"; };
+		DC4C0EB81E1E5D2F001F8398 /* TransformLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformLayerController.h; sourceTree = "<group>"; };
+		DC4C0EB91E1E5D2F001F8398 /* TransformLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformLayerController.m; sourceTree = "<group>"; };
+		DC4C0EBC1E1E6A72001F8398 /* GradientLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerController.h; sourceTree = "<group>"; };
+		DC4C0EBD1E1E6A72001F8398 /* GradientLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerController.m; sourceTree = "<group>"; };
 		DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kwyFrameAnimationModel.png; sourceTree = "<group>"; };
 		DCB574E31E14B0AD004CAB95 /* SpringAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringAnimationView.h; sourceTree = "<group>"; };
 		DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringAnimationView.m; sourceTree = "<group>"; };
@@ -418,6 +424,8 @@
 		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
 			isa = PBXGroup;
 			children = (
+				DC4C0EBB1E1E6A64001F8398 /* CAGradientLayer */,
+				DC4C0EB71E1E5D12001F8398 /* CATransformLayer */,
 				DC425E6A1E1E50CE00875FBF /* AVPlayerLayer */,
 				DC1B0A321E16722E002E6825 /* CAEAGLLayer */,
 				DC1B0A2B1E164620002E6825 /* CATextLayer */,
@@ -437,6 +445,24 @@
 				DC425E6C1E1E50F500875FBF /* AVPlayerLayerController.m */,
 			);
 			name = AVPlayerLayer;
+			sourceTree = "<group>";
+		};
+		DC4C0EB71E1E5D12001F8398 /* CATransformLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC4C0EB81E1E5D2F001F8398 /* TransformLayerController.h */,
+				DC4C0EB91E1E5D2F001F8398 /* TransformLayerController.m */,
+			);
+			name = CATransformLayer;
+			sourceTree = "<group>";
+		};
+		DC4C0EBB1E1E6A64001F8398 /* CAGradientLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC4C0EBC1E1E6A72001F8398 /* GradientLayerController.h */,
+				DC4C0EBD1E1E6A72001F8398 /* GradientLayerController.m */,
+			);
+			name = CAGradientLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -625,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4C0EBA1E1E5D2F001F8398 /* TransformLayerController.m in Sources */,
 				DC1B0A2E1E164634002E6825 /* TextLayerController.m in Sources */,
 				DC1B0A381E167260002E6825 /* EAGLLayerViewController.m in Sources */,
 				DC1B09571E1630B8002E6825 /* TiledLayerController.m in Sources */,
@@ -635,6 +662,7 @@
 				DC1B09531E162DF8002E6825 /* ShapeLayerController.m in Sources */,
 				DC1B09321E161EA3002E6825 /* CAViewController.m in Sources */,
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
+				DC4C0EBE1E1E6A72001F8398 /* GradientLayerController.m in Sources */,
 				DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */,
 				DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */,
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
