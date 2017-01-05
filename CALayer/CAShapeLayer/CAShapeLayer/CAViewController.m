@@ -9,6 +9,8 @@
 #import "CAViewController.h"
 #import "ShapeLayerController.h"
 #import "TiledLayerController.h"
+#import "TextLayerController.h"
+#import "EAGLLayerViewController.h"
 
 
 @interface CAViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -33,7 +35,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dataSources = @[@"CAShapeLayer",@"TiledLayer"];
+    _dataSources = @[@"CAShapeLayer",@"TiledLayer",@"TextLayer",@"CAEAGLLayer"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -66,6 +68,20 @@
         case 1:
         {
             TiledLayerController *tlVC = [TiledLayerController new];
+            tlVC.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:tlVC animated:true];
+        }
+            break;
+        case 2:
+        {
+            TextLayerController *tlVC = [TextLayerController new];
+            tlVC.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:tlVC animated:true];
+        }
+            break;
+        case 3:
+        {
+            EAGLLayerViewController *tlVC = [EAGLLayerViewController new];
             tlVC.navigationItem.title = _dataSources[indexPath.row];
             [self.navigationController pushViewController:tlVC animated:true];
         }

@@ -65,6 +65,8 @@
 		DC1B0A281E163C69002E6825 /* Snip20161230_4_07_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC1B0A001E163C69002E6825 /* Snip20161230_4_07_02.jpg */; };
 		DC1B0A291E163C69002E6825 /* Snip20161230_4_07_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC1B0A011E163C69002E6825 /* Snip20161230_4_07_03.jpg */; };
 		DC1B0A2A1E163C69002E6825 /* Snip20161230_4_07_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC1B0A021E163C69002E6825 /* Snip20161230_4_07_04.jpg */; };
+		DC1B0A2E1E164634002E6825 /* TextLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B0A2D1E164634002E6825 /* TextLayerController.m */; };
+		DC1B0A381E167260002E6825 /* EAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B0A371E167260002E6825 /* EAGLLayerViewController.m */; };
 		DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FB31E1508D200BF6951 /* ShapeLayerView.m */; };
 		DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */ = {isa = PBXBuildFile; fileRef = DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */; };
 		DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB574E41E14B0AD004CAB95 /* SpringAnimationView.m */; };
@@ -171,6 +173,10 @@
 		DC1B0A001E163C69002E6825 /* Snip20161230_4_07_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snip20161230_4_07_02.jpg; sourceTree = "<group>"; };
 		DC1B0A011E163C69002E6825 /* Snip20161230_4_07_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snip20161230_4_07_03.jpg; sourceTree = "<group>"; };
 		DC1B0A021E163C69002E6825 /* Snip20161230_4_07_04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snip20161230_4_07_04.jpg; sourceTree = "<group>"; };
+		DC1B0A2C1E164634002E6825 /* TextLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayerController.h; sourceTree = "<group>"; };
+		DC1B0A2D1E164634002E6825 /* TextLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayerController.m; sourceTree = "<group>"; };
+		DC1B0A361E167260002E6825 /* EAGLLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLLayerViewController.h; sourceTree = "<group>"; };
+		DC1B0A371E167260002E6825 /* EAGLLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLLayerViewController.m; sourceTree = "<group>"; };
 		DC226FB21E1508D100BF6951 /* ShapeLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeLayerView.h; sourceTree = "<group>"; };
 		DC226FB31E1508D200BF6951 /* ShapeLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeLayerView.m; sourceTree = "<group>"; };
 		DCB574E11E14AEBB004CAB95 /* kwyFrameAnimationModel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kwyFrameAnimationModel.png; sourceTree = "<group>"; };
@@ -385,9 +391,29 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		DC1B0A2B1E164620002E6825 /* CATextLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC1B0A2C1E164634002E6825 /* TextLayerController.h */,
+				DC1B0A2D1E164634002E6825 /* TextLayerController.m */,
+			);
+			name = CATextLayer;
+			sourceTree = "<group>";
+		};
+		DC1B0A321E16722E002E6825 /* CAEAGLLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC1B0A361E167260002E6825 /* EAGLLayerViewController.h */,
+				DC1B0A371E167260002E6825 /* EAGLLayerViewController.m */,
+			);
+			name = CAEAGLLayer;
+			sourceTree = "<group>";
+		};
 		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
 			isa = PBXGroup;
 			children = (
+				DC1B0A321E16722E002E6825 /* CAEAGLLayer */,
+				DC1B0A2B1E164620002E6825 /* CATextLayer */,
 				DC1B09541E16309C002E6825 /* CATiledLayer */,
 				DC1B09501E162DE5002E6825 /* CAShapeLayer */,
 				DC1B092F1E161EA3002E6825 /* CAViewController.h */,
@@ -582,6 +608,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1B0A2E1E164634002E6825 /* TextLayerController.m in Sources */,
+				DC1B0A381E167260002E6825 /* EAGLLayerViewController.m in Sources */,
 				DC1B09571E1630B8002E6825 /* TiledLayerController.m in Sources */,
 				DC04D7B61E125BB1004CCC4D /* ViewController.m in Sources */,
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,

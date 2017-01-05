@@ -43,3 +43,7 @@ http://www.cnblogs.com/kenshincui/p/3972100.html
 动画上涉及到的参考链接
 
 ShapeLayerView : 这个类是实现了视频录制里面的动画内容，这个CAShapeLayer 是用来回话形状的。
+
+CATiledLayer : 这个平铺的内容是关于如何进行处理的，也就是一个块块的接起来的；
+
+TextLayerController : 这个是用于显示文字的layer
