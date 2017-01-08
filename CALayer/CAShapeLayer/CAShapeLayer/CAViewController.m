@@ -14,7 +14,10 @@
 #import "AVPlayerLayerController.h"
 #import "TransformLayerController.h"
 #import "GradientLayerController.h"
-
+#import "ReplicatorLayerController.h"
+#import "ScrollLayerController.h"
+#import "EmitterLayerController.h"
+#import "EAGLLayerController.h"
 
 @interface CAViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -38,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _dataSources = @[@"CAShapeLayer",@"TiledLayer",@"TextLayer",@"CAEAGLLayer",@"AVPlayerLayer",@"CATransformLayer",@"CAGradientLayer"];
+    _dataSources = @[@"CAShapeLayer",@"TiledLayer",@"TextLayer",@"CAEAGLLayer",@"AVPlayerLayer",@"CATransformLayer",@"CAGradientLayer",@"ReplicatorLayer",@"ScrollLayer",@"CAEmitterLayer",@"CAEAGLLayer"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
@@ -108,6 +111,33 @@
             GradientLayerController *tlVC = [GradientLayerController new];
             tlVC.navigationItem.title = _dataSources[indexPath.row];
             [self.navigationController pushViewController:tlVC animated:true];
+        }
+            break;
+        case 7:{
+            ReplicatorLayerController *vc = [ReplicatorLayerController new];
+            vc.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:vc animated:true];
+        }
+            break;
+        case 8:
+        {
+            ScrollLayerController *vc = [ScrollLayerController new];
+            vc.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:vc animated:true];
+        }
+            break;
+        case 9:
+        {
+            EmitterLayerController *vc = [EmitterLayerController new];
+            vc.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:vc animated:true];
+        }
+            break;
+        case 10:
+        {
+            EAGLLayerController *vc = [EAGLLayerController new];
+            vc.navigationItem.title = _dataSources[indexPath.row];
+            [self.navigationController pushViewController:vc animated:true];
         }
             break;
         default:

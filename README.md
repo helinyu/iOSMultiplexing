@@ -52,3 +52,9 @@ AVPlayerLayer ： 用来显示视频的播放的，并且是在AVFoundation这�
 
 CAGradientLayer: 一个渐变色的Layer的内容 ，用于显示渐变色，这个苹果官方使用了渐变色进行渲染了
 
+CAReplicatorLayer : 这个是重复图层，用于拷贝指定的图层，然后可以进行变换操作
+
+CAScrollLayer  :  这个用来定制滑动的过程，不过是很少用的；
+
+
+

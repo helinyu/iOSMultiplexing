@@ -20,6 +20,12 @@
 		DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7E81E126677004CCC4D /* ProgressView.m */; };
 		DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */; };
 		DC04D7EF1E127970004CCC4D /* petal.png in Resources */ = {isa = PBXBuildFile; fileRef = DC04D7EE1E127970004CCC4D /* petal.png */; };
+		DC0D736F1E21CC9000AB2361 /* ReplicatorLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0D736E1E21CC9000AB2361 /* ReplicatorLayerController.m */; };
+		DC0D73731E21E39900AB2361 /* ScrollLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0D73721E21E39900AB2361 /* ScrollLayerController.m */; };
+		DC0D73761E21ED8B00AB2361 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0D73751E21ED8B00AB2361 /* ScrollView.m */; };
+		DC0D737D1E21EF4C00AB2361 /* EmitterLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0D737C1E21EF4C00AB2361 /* EmitterLayerController.m */; };
+		DC0D737F1E22095800AB2361 /* Spark.png in Resources */ = {isa = PBXBuildFile; fileRef = DC0D737E1E22095800AB2361 /* Spark.png */; };
+		DC0D73831E220BD800AB2361 /* EAGLLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0D73821E220BD800AB2361 /* EAGLLayerController.m */; };
 		DC1B092E1E161E96002E6825 /* Snip20161230_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DC1B092D1E161E96002E6825 /* Snip20161230_1.png */; };
 		DC1B09321E161EA3002E6825 /* CAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B09301E161EA3002E6825 /* CAViewController.m */; };
 		DC1B09331E161EA3002E6825 /* CAViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1B09311E161EA3002E6825 /* CAViewController.xib */; };
@@ -129,6 +135,17 @@
 		DC04D7EB1E1278CB004CCC4D /* AnimationLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationLayerView.h; sourceTree = "<group>"; };
 		DC04D7EC1E1278CB004CCC4D /* AnimationLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationLayerView.m; sourceTree = "<group>"; };
 		DC04D7EE1E127970004CCC4D /* petal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petal.png; sourceTree = "<group>"; };
+		DC0D736D1E21CC9000AB2361 /* ReplicatorLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorLayerController.h; sourceTree = "<group>"; };
+		DC0D736E1E21CC9000AB2361 /* ReplicatorLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLayerController.m; sourceTree = "<group>"; };
+		DC0D73711E21E39900AB2361 /* ScrollLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollLayerController.h; sourceTree = "<group>"; };
+		DC0D73721E21E39900AB2361 /* ScrollLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollLayerController.m; sourceTree = "<group>"; };
+		DC0D73741E21ED8B00AB2361 /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		DC0D73751E21ED8B00AB2361 /* ScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
+		DC0D737B1E21EF4C00AB2361 /* EmitterLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterLayerController.h; sourceTree = "<group>"; };
+		DC0D737C1E21EF4C00AB2361 /* EmitterLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterLayerController.m; sourceTree = "<group>"; };
+		DC0D737E1E22095800AB2361 /* Spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spark.png; sourceTree = "<group>"; };
+		DC0D73811E220BD800AB2361 /* EAGLLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLLayerController.h; sourceTree = "<group>"; };
+		DC0D73821E220BD800AB2361 /* EAGLLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLLayerController.m; sourceTree = "<group>"; };
 		DC1B092D1E161E96002E6825 /* Snip20161230_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20161230_1.png; sourceTree = "<group>"; };
 		DC1B092F1E161EA3002E6825 /* CAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAViewController.h; sourceTree = "<group>"; };
 		DC1B09301E161EA3002E6825 /* CAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAViewController.m; sourceTree = "<group>"; };
@@ -332,6 +349,45 @@
 			name = animation;
 			sourceTree = "<group>";
 		};
+		DC0D736C1E21CC7F00AB2361 /* CAReplicatorLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D736D1E21CC9000AB2361 /* ReplicatorLayerController.h */,
+				DC0D736E1E21CC9000AB2361 /* ReplicatorLayerController.m */,
+			);
+			name = CAReplicatorLayer;
+			sourceTree = "<group>";
+		};
+		DC0D73701E21E38600AB2361 /* CAScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D73711E21E39900AB2361 /* ScrollLayerController.h */,
+				DC0D73721E21E39900AB2361 /* ScrollLayerController.m */,
+				DC0D73741E21ED8B00AB2361 /* ScrollView.h */,
+				DC0D73751E21ED8B00AB2361 /* ScrollView.m */,
+			);
+			name = CAScrollLayer;
+			sourceTree = "<group>";
+		};
+		DC0D73771E21EF2400AB2361 /* CAEmitterLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D737E1E22095800AB2361 /* Spark.png */,
+				DC0D737B1E21EF4C00AB2361 /* EmitterLayerController.h */,
+				DC0D737C1E21EF4C00AB2361 /* EmitterLayerController.m */,
+			);
+			name = CAEmitterLayer;
+			sourceTree = "<group>";
+		};
+		DC0D73801E220BC900AB2361 /* CAEAGLLayer */ = {
+			isa = PBXGroup;
+			children = (
+				DC0D73811E220BD800AB2361 /* EAGLLayerController.h */,
+				DC0D73821E220BD800AB2361 /* EAGLLayerController.m */,
+			);
+			name = CAEAGLLayer;
+			sourceTree = "<group>";
+		};
 		DC1B09501E162DE5002E6825 /* CAShapeLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +480,10 @@
 		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
 			isa = PBXGroup;
 			children = (
+				DC0D73801E220BC900AB2361 /* CAEAGLLayer */,
+				DC0D73771E21EF2400AB2361 /* CAEmitterLayer */,
+				DC0D73701E21E38600AB2361 /* CAScrollLayer */,
+				DC0D736C1E21CC7F00AB2361 /* CAReplicatorLayer */,
 				DC4C0EBB1E1E6A64001F8398 /* CAGradientLayer */,
 				DC4C0EB71E1E5D12001F8398 /* CATransformLayer */,
 				DC425E6A1E1E50CE00875FBF /* AVPlayerLayer */,
@@ -622,6 +682,7 @@
 				DC1B0A1F1E163C69002E6825 /* Snip20161230_4_05_03.jpg in Resources */,
 				DCB574E21E14AEBB004CAB95 /* kwyFrameAnimationModel.png in Resources */,
 				DC1B0A1D1E163C69002E6825 /* Snip20161230_4_05_01.jpg in Resources */,
+				DC0D737F1E22095800AB2361 /* Spark.png in Resources */,
 				DC425E6F1E1E52FE00875FBF /* test0.mp4 in Resources */,
 				DC1B0A111E163C69002E6825 /* Snip20161230_4_02_04.jpg in Resources */,
 				DC04D7EF1E127970004CCC4D /* petal.png in Resources */,
@@ -651,15 +712,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0D737D1E21EF4C00AB2361 /* EmitterLayerController.m in Sources */,
+				DC0D73831E220BD800AB2361 /* EAGLLayerController.m in Sources */,
 				DC4C0EBA1E1E5D2F001F8398 /* TransformLayerController.m in Sources */,
 				DC1B0A2E1E164634002E6825 /* TextLayerController.m in Sources */,
 				DC1B0A381E167260002E6825 /* EAGLLayerViewController.m in Sources */,
 				DC1B09571E1630B8002E6825 /* TiledLayerController.m in Sources */,
+				DC0D736F1E21CC9000AB2361 /* ReplicatorLayerController.m in Sources */,
 				DC04D7B61E125BB1004CCC4D /* ViewController.m in Sources */,
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,
 				DC425E6D1E1E50F500875FBF /* AVPlayerLayerController.m in Sources */,
 				DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */,
 				DC1B09531E162DF8002E6825 /* ShapeLayerController.m in Sources */,
+				DC0D73731E21E39900AB2361 /* ScrollLayerController.m in Sources */,
 				DC1B09321E161EA3002E6825 /* CAViewController.m in Sources */,
 				DC04D7E31E125BEE004CCC4D /* CAShapeLayer+ViewMask.m in Sources */,
 				DC4C0EBE1E1E6A72001F8398 /* GradientLayerController.m in Sources */,
@@ -668,6 +733,7 @@
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
 				DCB574F61E14D218004CAB95 /* FrameByFrameAnimationView.m in Sources */,
 				DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */,
+				DC0D73761E21ED8B00AB2361 /* ScrollView.m in Sources */,
 				DCFCB4AF1E13D8D70081C591 /* KeyFrameAnimationView.m in Sources */,
 				DC04D7E61E126000004CCC4D /* AudioIconView.m in Sources */,
 				DCB574ED1E14C401004CAB95 /* TransitionView.m in Sources */,
