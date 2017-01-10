@@ -95,6 +95,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     //set up context
     self.glContext = [[EAGLContext alloc] initWithAPI: kEAGLRenderingAPIOpenGLES2];
     [EAGLContext setCurrentContext:self.glContext];
@@ -129,7 +132,6 @@
     [EAGLContext setCurrentContext:nil];
 }
 
-
 @end
 
 /*
@@ -140,6 +142,9 @@
 在iOS 5中，引入了一个新的框架叫做GLKit，它去掉了一些设置OpenGL的复杂性，提供了一个叫做CLKView的UIView的子类，帮你处理大部分的设置和绘制工作。前提是各种各样的OpenGL绘图缓冲的底层可配置项仍然需要你用CAEAGLLayer完成，它是CALayer的一个子类，用来显示任意的OpenGL图形。
  
  尽管不需要GLKit也可以做到这一切，但是GLKit囊括了很多额外的工作，比如设置顶点和片段着色器，这些都以类C语言叫做GLSL自包含在程序中，同时在运行时载入到图形硬件中。编写GLSL代码和设置EAGLayer没有什么关系，所以我们将用GLKBaseEffect类将着色逻辑抽象出来。其他的事情，我们还是会有以往的方式。
+ 
+ 
+ 上面的这个layer就是关于对应的绘画的，和openGL对应的方法相互依赖使用。遵循了接口 EAGLDrawable
  
  
 */
