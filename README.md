@@ -56,5 +56,6 @@ CAReplicatorLayer : 这个是重复图层，用于拷贝指定的图层，然后
 
 CAScrollLayer  :  这个用来定制滑动的过程，不过是很少用的；
 
+CAEALLayer : 渲染图片的过程的内容是 还需要进行研究（这个涉及到图片的处理等等）
 
 
