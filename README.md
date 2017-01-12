@@ -58,4 +58,8 @@ CAScrollLayer  :  这个用来定制滑动的过程，不过是很少用的；
 
 CAEALLayer : 渲染图片的过程的内容是 还需要进行研究（这个涉及到图片的处理等等）
 
+#####################
+NSLog  这个对象是关于调试中我们自定义丰富的方法进行答应log:
+https://developer.apple.com/library/content/qa/qa1669/_index.html
+rich log官网地址；
 
