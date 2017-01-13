@@ -10,6 +10,7 @@
 #import "TransitionViewController.h"
 #import "FinishBlockViewController.h"
 #import "LayerBehaviorViewController.h"
+#import "PresentationAndModelViewController.h"
 
 @interface ImplicitAnimationViewController ()
 @property (strong, nonatomic) NSArray *datasources;
@@ -22,7 +23,7 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     
-    _datasources = @[@"事务",@"完成块",@"图层行为"];
+    _datasources = @[@"事务",@"完成块",@"图层行为",@"图层与模型"];
     
 }
 
@@ -61,6 +62,15 @@
             vc.view.backgroundColor = [UIColor grayColor];
             vc.title = _datasources[indexPath.row];
             [self.navigationController pushViewController:vc animated:true];
+        }
+            break;
+        case 3:
+        {
+            PresentationAndModelViewController *vc = [PresentationAndModelViewController new];
+            vc.view.backgroundColor = [UIColor grayColor];
+            vc.title = _datasources[indexPath.row];
+            [self.navigationController pushViewController:vc animated:true];
+
         }
             break;
         default:

@@ -73,6 +73,8 @@
 		DC1B0A2A1E163C69002E6825 /* Snip20161230_4_07_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC1B0A021E163C69002E6825 /* Snip20161230_4_07_04.jpg */; };
 		DC1B0A2E1E164634002E6825 /* TextLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B0A2D1E164634002E6825 /* TextLayerController.m */; };
 		DC1B0A381E167260002E6825 /* EAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B0A371E167260002E6825 /* EAGLLayerViewController.m */; };
+		DC21B0011E28BD8A009BFA2B /* PresentationAndModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21B0001E28BD8A009BFA2B /* PresentationAndModelViewController.m */; };
+		DC21B0031E28C682009BFA2B /* presentationAndModelLayer.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B0021E28C682009BFA2B /* presentationAndModelLayer.png */; };
 		DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FB31E1508D200BF6951 /* ShapeLayerView.m */; };
 		DC425E6D1E1E50F500875FBF /* AVPlayerLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC425E6C1E1E50F500875FBF /* AVPlayerLayerController.m */; };
 		DC425E6F1E1E52FE00875FBF /* test0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DC425E6E1E1E52FE00875FBF /* test0.mp4 */; };
@@ -202,6 +204,9 @@
 		DC1B0A2D1E164634002E6825 /* TextLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayerController.m; sourceTree = "<group>"; };
 		DC1B0A361E167260002E6825 /* EAGLLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLLayerViewController.h; sourceTree = "<group>"; };
 		DC1B0A371E167260002E6825 /* EAGLLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLLayerViewController.m; sourceTree = "<group>"; };
+		DC21AFFF1E28BD8A009BFA2B /* PresentationAndModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationAndModelViewController.h; sourceTree = "<group>"; };
+		DC21B0001E28BD8A009BFA2B /* PresentationAndModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationAndModelViewController.m; sourceTree = "<group>"; };
+		DC21B0021E28C682009BFA2B /* presentationAndModelLayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentationAndModelLayer.png; sourceTree = "<group>"; };
 		DC226FB21E1508D100BF6951 /* ShapeLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeLayerView.h; sourceTree = "<group>"; };
 		DC226FB31E1508D200BF6951 /* ShapeLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeLayerView.m; sourceTree = "<group>"; };
 		DC425E6B1E1E50F500875FBF /* AVPlayerLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerLayerController.h; sourceTree = "<group>"; };
@@ -559,12 +564,15 @@
 		DC6CF4221E2788D900F0A5D3 /* transition */ = {
 			isa = PBXGroup;
 			children = (
+				DC21B0021E28C682009BFA2B /* presentationAndModelLayer.png */,
 				DC6CF4231E27891800F0A5D3 /* TransitionViewController.h */,
 				DC6CF4241E27891800F0A5D3 /* TransitionViewController.m */,
 				DC6CF4261E279B0700F0A5D3 /* FinishBlockViewController.h */,
 				DC6CF4271E279B0700F0A5D3 /* FinishBlockViewController.m */,
 				DC6CF4291E279CEE00F0A5D3 /* LayerBehaviorViewController.h */,
 				DC6CF42A1E279CEE00F0A5D3 /* LayerBehaviorViewController.m */,
+				DC21AFFF1E28BD8A009BFA2B /* PresentationAndModelViewController.h */,
+				DC21B0001E28BD8A009BFA2B /* PresentationAndModelViewController.m */,
 			);
 			name = transition;
 			sourceTree = "<group>";
@@ -698,6 +706,7 @@
 				DCB574F11E14CE0A004CAB95 /* Snip20161229_0.png in Resources */,
 				DC1B0A071E163C69002E6825 /* Snip20161230_4_00_04.jpg in Resources */,
 				DC1B0A281E163C69002E6825 /* Snip20161230_4_07_02.jpg in Resources */,
+				DC21B0031E28C682009BFA2B /* presentationAndModelLayer.png in Resources */,
 				DC1B09331E161EA3002E6825 /* CAViewController.xib in Resources */,
 				DC04D7BE1E125BB1004CCC4D /* LaunchScreen.storyboard in Resources */,
 				DC1B0A081E163C69002E6825 /* Snip20161230_4_01_00.jpg in Resources */,
@@ -786,6 +795,7 @@
 				DC6CF4251E27891800F0A5D3 /* TransitionViewController.m in Sources */,
 				DCB574ED1E14C401004CAB95 /* TransitionView.m in Sources */,
 				DCB574EA1E14BE14004CAB95 /* GroupAnimationView.m in Sources */,
+				DC21B0011E28BD8A009BFA2B /* PresentationAndModelViewController.m in Sources */,
 				DC04D7E91E126677004CCC4D /* ProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

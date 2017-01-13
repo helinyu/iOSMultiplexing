@@ -65,5 +65,8 @@ rich log官网地址；
 
 ####
 Implicit animation  这里面是关于动画里面的隐式动画
+Summary: 隐式动画，core animation对执行属性选择合适的动画行为的机制。
+同时知道UIKit是如何充分利用Core Animation 的隐式动画机制强化它的显示系统，以及动画是如何被默认禁用并且需要的时候启用的。
+了解呈现 和模型 图层，以及core Animation 是如何通过他们来判断图层当前位置以及将要到达的位置。
 
 &&&
