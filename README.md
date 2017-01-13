@@ -63,3 +63,7 @@ NSLog  这个对象是关于调试中我们自定义丰富的方法进行答应l
 https://developer.apple.com/library/content/qa/qa1669/_index.html
 rich log官网地址；
 
+####
+Implicit animation  这里面是关于动画里面的隐式动画
+
+&&&

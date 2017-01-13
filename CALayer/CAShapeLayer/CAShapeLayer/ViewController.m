@@ -19,6 +19,7 @@
 #import "FrameByFrameAnimationView.h"
 #import "ShapeLayerView.h"
 #import "CAViewController.h"
+#import "ImplicitAnimationViewController.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -28,7 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"core animation";
     self.view.backgroundColor = [UIColor grayColor];
 
 //    [self test0];
@@ -43,11 +44,30 @@
 //    [self testTrainsition];
 //    [self testFrameByFrame];
 //    [self testShapeLayer];
-    [self toCAViewController];
+//    [self toCAViewController];
+}
+- (IBAction)onToVCClicked:(id)sender {
+    UIButton *btn = (UIButton*)sender;
+    switch (btn.tag) {
+        case 0:
+            [self toCAViewController];
+            break;
+        case 1:
+            [self toTransitionVC];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)toTransitionVC {
+    ImplicitAnimationViewController *vc = [ImplicitAnimationViewController new];
+    vc.view.backgroundColor = [UIColor grayColor];
+    vc.title = @"7、隐式动画";
+    [self.navigationController pushViewController:vc animated:false];
 }
 
 - (void)toCAViewController {
-//    CAViewController *vc = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CAViewController class]) owner:self options:nil] lastObject];
     CAViewController *vc = [[CAViewController alloc] initWithNibName:NSStringFromClass([CAViewController class]) bundle:nil];
     [self.navigationController pushViewController:vc animated:true];
 }

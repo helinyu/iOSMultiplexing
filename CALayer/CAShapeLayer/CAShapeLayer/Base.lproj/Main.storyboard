@@ -20,13 +20,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxv-xx-VpX" userLabel="6.专用图层">
+                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.83529411760000005" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ymt-cp-Pjb"/>
+                                </constraints>
+                                <state key="normal" title="6、专用图层"/>
+                                <connections>
+                                    <action selector="onToVCClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G7h-9I-04P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJY-Uf-Hrb">
+                                <rect key="frame" x="0.0" y="95" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.83529411760000005" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bXu-kk-ahW"/>
+                                </constraints>
+                                <state key="normal" title="7、隐式动画"/>
+                                <connections>
+                                    <action selector="onToVCClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2u-HU-9wj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AJY-Uf-Hrb" secondAttribute="trailing" id="61T-yr-1eM"/>
+                            <constraint firstItem="pxv-xx-VpX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6Mt-zD-fXN"/>
+                            <constraint firstItem="AJY-Uf-Hrb" firstAttribute="top" secondItem="pxv-xx-VpX" secondAttribute="bottom" constant="1" id="9o7-dL-pRL"/>
+                            <constraint firstItem="pxv-xx-VpX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P6U-dA-W1g"/>
+                            <constraint firstItem="AJY-Uf-Hrb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gVd-OO-C0q"/>
+                            <constraint firstAttribute="trailing" secondItem="pxv-xx-VpX" secondAttribute="trailing" id="v5d-Nn-46P"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HbN-AE-YK5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="124"/>
+            <point key="canvasLocation" x="908" y="123.68815592203899"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F7f-Gb-RAu">
