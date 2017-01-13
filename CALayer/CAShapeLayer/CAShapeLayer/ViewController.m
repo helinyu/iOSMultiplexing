@@ -20,6 +20,7 @@
 #import "ShapeLayerView.h"
 #import "CAViewController.h"
 #import "ImplicitAnimationViewController.h"
+#import "ExplicitAnimationViewController.h"
 
 @interface ViewController ()<ProgressViewProtocol>
 
@@ -55,9 +56,19 @@
         case 1:
             [self toTransitionVC];
             break;
+        case 2:
+            [self toExplicityVC];
+            break;
         default:
             break;
     }
+}
+
+- (void)toExplicityVC {
+    ExplicitAnimationViewController *vc  = [ExplicitAnimationViewController new];
+    vc.view.backgroundColor = [UIColor grayColor];
+    vc.title = @"显示动画";
+    [self.navigationController pushViewController:vc animated:false];
 }
 
 - (void)toTransitionVC {

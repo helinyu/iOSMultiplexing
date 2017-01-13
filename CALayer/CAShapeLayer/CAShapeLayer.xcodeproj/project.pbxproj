@@ -75,6 +75,7 @@
 		DC1B0A381E167260002E6825 /* EAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1B0A371E167260002E6825 /* EAGLLayerViewController.m */; };
 		DC21B0011E28BD8A009BFA2B /* PresentationAndModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21B0001E28BD8A009BFA2B /* PresentationAndModelViewController.m */; };
 		DC21B0031E28C682009BFA2B /* presentationAndModelLayer.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B0021E28C682009BFA2B /* presentationAndModelLayer.png */; };
+		DC21B0071E28C82D009BFA2B /* ExplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21B0061E28C82D009BFA2B /* ExplicitAnimationViewController.m */; };
 		DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FB31E1508D200BF6951 /* ShapeLayerView.m */; };
 		DC425E6D1E1E50F500875FBF /* AVPlayerLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC425E6C1E1E50F500875FBF /* AVPlayerLayerController.m */; };
 		DC425E6F1E1E52FE00875FBF /* test0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DC425E6E1E1E52FE00875FBF /* test0.mp4 */; };
@@ -207,6 +208,8 @@
 		DC21AFFF1E28BD8A009BFA2B /* PresentationAndModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationAndModelViewController.h; sourceTree = "<group>"; };
 		DC21B0001E28BD8A009BFA2B /* PresentationAndModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationAndModelViewController.m; sourceTree = "<group>"; };
 		DC21B0021E28C682009BFA2B /* presentationAndModelLayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentationAndModelLayer.png; sourceTree = "<group>"; };
+		DC21B0051E28C82D009BFA2B /* ExplicitAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplicitAnimationViewController.h; sourceTree = "<group>"; };
+		DC21B0061E28C82D009BFA2B /* ExplicitAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplicitAnimationViewController.m; sourceTree = "<group>"; };
 		DC226FB21E1508D100BF6951 /* ShapeLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeLayerView.h; sourceTree = "<group>"; };
 		DC226FB31E1508D200BF6951 /* ShapeLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeLayerView.m; sourceTree = "<group>"; };
 		DC425E6B1E1E50F500875FBF /* AVPlayerLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerLayerController.h; sourceTree = "<group>"; };
@@ -494,9 +497,19 @@
 			name = CAEAGLLayer;
 			sourceTree = "<group>";
 		};
+		DC21B0041E28C80D009BFA2B /* explicit animation  */ = {
+			isa = PBXGroup;
+			children = (
+				DC21B0051E28C82D009BFA2B /* ExplicitAnimationViewController.h */,
+				DC21B0061E28C82D009BFA2B /* ExplicitAnimationViewController.m */,
+			);
+			name = "explicit animation ";
+			sourceTree = "<group>";
+		};
 		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
 			isa = PBXGroup;
 			children = (
+				DC21B0041E28C80D009BFA2B /* explicit animation  */,
 				DC6CF41E1E2784F100F0A5D3 /* Implicit animation  */,
 				DC6CF41D1E2784D800F0A5D3 /* Layer */,
 			);
@@ -775,6 +788,7 @@
 				DC0D736F1E21CC9000AB2361 /* ReplicatorLayerController.m in Sources */,
 				DC04D7B61E125BB1004CCC4D /* ViewController.m in Sources */,
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,
+				DC21B0071E28C82D009BFA2B /* ExplicitAnimationViewController.m in Sources */,
 				DC425E6D1E1E50F500875FBF /* AVPlayerLayerController.m in Sources */,
 				DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */,
 				DC1B09531E162DF8002E6825 /* ShapeLayerController.m in Sources */,
