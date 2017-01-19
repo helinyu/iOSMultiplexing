@@ -76,11 +76,14 @@
 		DC21B0011E28BD8A009BFA2B /* PresentationAndModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21B0001E28BD8A009BFA2B /* PresentationAndModelViewController.m */; };
 		DC21B0031E28C682009BFA2B /* presentationAndModelLayer.png in Resources */ = {isa = PBXBuildFile; fileRef = DC21B0021E28C682009BFA2B /* presentationAndModelLayer.png */; };
 		DC21B0071E28C82D009BFA2B /* ExplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21B0061E28C82D009BFA2B /* ExplicitAnimationViewController.m */; };
+		DC21B00B1E28CCCD009BFA2B /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21B00A1E28CCCD009BFA2B /* MediaTimingViewController.m */; };
+		DC21B00F1E28CF3D009BFA2B /* MediaTimingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DC21B00E1E28CF3D009BFA2B /* MediaTimingVC.m */; };
 		DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC226FB31E1508D200BF6951 /* ShapeLayerView.m */; };
 		DC425E6D1E1E50F500875FBF /* AVPlayerLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC425E6C1E1E50F500875FBF /* AVPlayerLayerController.m */; };
 		DC425E6F1E1E52FE00875FBF /* test0.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DC425E6E1E1E52FE00875FBF /* test0.mp4 */; };
 		DC4C0EBA1E1E5D2F001F8398 /* TransformLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4C0EB91E1E5D2F001F8398 /* TransformLayerController.m */; };
 		DC4C0EBE1E1E6A72001F8398 /* GradientLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4C0EBD1E1E6A72001F8398 /* GradientLayerController.m */; };
+		DC5378C21E28D373006E723B /* Snip20170113_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5378C11E28D373006E723B /* Snip20170113_1.png */; };
 		DC6CF4211E2786BD00F0A5D3 /* ImplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6CF4201E2786BD00F0A5D3 /* ImplicitAnimationViewController.m */; };
 		DC6CF4251E27891800F0A5D3 /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6CF4241E27891800F0A5D3 /* TransitionViewController.m */; };
 		DC6CF4281E279B0700F0A5D3 /* FinishBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC6CF4271E279B0700F0A5D3 /* FinishBlockViewController.m */; };
@@ -210,6 +213,10 @@
 		DC21B0021E28C682009BFA2B /* presentationAndModelLayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentationAndModelLayer.png; sourceTree = "<group>"; };
 		DC21B0051E28C82D009BFA2B /* ExplicitAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExplicitAnimationViewController.h; sourceTree = "<group>"; };
 		DC21B0061E28C82D009BFA2B /* ExplicitAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExplicitAnimationViewController.m; sourceTree = "<group>"; };
+		DC21B0091E28CCCD009BFA2B /* MediaTimingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingViewController.h; sourceTree = "<group>"; };
+		DC21B00A1E28CCCD009BFA2B /* MediaTimingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingViewController.m; sourceTree = "<group>"; };
+		DC21B00D1E28CF3D009BFA2B /* MediaTimingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingVC.h; sourceTree = "<group>"; };
+		DC21B00E1E28CF3D009BFA2B /* MediaTimingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingVC.m; sourceTree = "<group>"; };
 		DC226FB21E1508D100BF6951 /* ShapeLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeLayerView.h; sourceTree = "<group>"; };
 		DC226FB31E1508D200BF6951 /* ShapeLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeLayerView.m; sourceTree = "<group>"; };
 		DC425E6B1E1E50F500875FBF /* AVPlayerLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerLayerController.h; sourceTree = "<group>"; };
@@ -219,6 +226,7 @@
 		DC4C0EB91E1E5D2F001F8398 /* TransformLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformLayerController.m; sourceTree = "<group>"; };
 		DC4C0EBC1E1E6A72001F8398 /* GradientLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerController.h; sourceTree = "<group>"; };
 		DC4C0EBD1E1E6A72001F8398 /* GradientLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerController.m; sourceTree = "<group>"; };
+		DC5378C11E28D373006E723B /* Snip20170113_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20170113_1.png; sourceTree = "<group>"; };
 		DC6CF41F1E2786BD00F0A5D3 /* ImplicitAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationViewController.h; sourceTree = "<group>"; };
 		DC6CF4201E2786BD00F0A5D3 /* ImplicitAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationViewController.m; sourceTree = "<group>"; };
 		DC6CF4231E27891800F0A5D3 /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
@@ -506,9 +514,30 @@
 			name = "explicit animation ";
 			sourceTree = "<group>";
 		};
+		DC21B0081E28CC9A009BFA2B /* Layer time */ = {
+			isa = PBXGroup;
+			children = (
+				DC21B0101E28CF99009BFA2B /* detail */,
+				DC21B0091E28CCCD009BFA2B /* MediaTimingViewController.h */,
+				DC21B00A1E28CCCD009BFA2B /* MediaTimingViewController.m */,
+			);
+			name = "Layer time";
+			sourceTree = "<group>";
+		};
+		DC21B0101E28CF99009BFA2B /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				DC21B00D1E28CF3D009BFA2B /* MediaTimingVC.h */,
+				DC21B00E1E28CF3D009BFA2B /* MediaTimingVC.m */,
+				DC5378C11E28D373006E723B /* Snip20170113_1.png */,
+			);
+			name = detail;
+			sourceTree = "<group>";
+		};
 		DC226FB11E15049300BF6951 /* quartzCore_Layer */ = {
 			isa = PBXGroup;
 			children = (
+				DC21B0081E28CC9A009BFA2B /* Layer time */,
 				DC21B0041E28C80D009BFA2B /* explicit animation  */,
 				DC6CF41E1E2784F100F0A5D3 /* Implicit animation  */,
 				DC6CF41D1E2784D800F0A5D3 /* Layer */,
@@ -713,6 +742,7 @@
 				DC1B0A061E163C69002E6825 /* Snip20161230_4_00_03.jpg in Resources */,
 				DC1B0A241E163C69002E6825 /* Snip20161230_4_06_03.jpg in Resources */,
 				DC1B0A231E163C69002E6825 /* Snip20161230_4_06_02.jpg in Resources */,
+				DC5378C21E28D373006E723B /* Snip20170113_1.png in Resources */,
 				DC1B0A161E163C69002E6825 /* Snip20161230_4_03_04.jpg in Resources */,
 				DC1B0A041E163C69002E6825 /* Snip20161230_4_00_01.jpg in Resources */,
 				DC1B0A191E163C69002E6825 /* Snip20161230_4_04_02.jpg in Resources */,
@@ -789,6 +819,7 @@
 				DC04D7B61E125BB1004CCC4D /* ViewController.m in Sources */,
 				DC04D7B31E125BB1004CCC4D /* AppDelegate.m in Sources */,
 				DC21B0071E28C82D009BFA2B /* ExplicitAnimationViewController.m in Sources */,
+				DC21B00B1E28CCCD009BFA2B /* MediaTimingViewController.m in Sources */,
 				DC425E6D1E1E50F500875FBF /* AVPlayerLayerController.m in Sources */,
 				DC04D7ED1E1278CB004CCC4D /* AnimationLayerView.m in Sources */,
 				DC1B09531E162DF8002E6825 /* ShapeLayerController.m in Sources */,
@@ -799,6 +830,7 @@
 				DC4C0EBE1E1E6A72001F8398 /* GradientLayerController.m in Sources */,
 				DC226FB41E1508D200BF6951 /* ShapeLayerView.m in Sources */,
 				DCFCB4AA1E13C6AC0081C591 /* BasicAnimationView.m in Sources */,
+				DC21B00F1E28CF3D009BFA2B /* MediaTimingVC.m in Sources */,
 				DC04D7B01E125BB1004CCC4D /* main.m in Sources */,
 				DCB574F61E14D218004CAB95 /* FrameByFrameAnimationView.m in Sources */,
 				DCB574E51E14B0AD004CAB95 /* SpringAnimationView.m in Sources */,

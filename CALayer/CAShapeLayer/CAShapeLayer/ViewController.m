@@ -21,8 +21,9 @@
 #import "CAViewController.h"
 #import "ImplicitAnimationViewController.h"
 #import "ExplicitAnimationViewController.h"
+#import "MediaTimingViewController.h"
 
-@interface ViewController ()<ProgressViewProtocol>
+@interface ViewController ()
 
 @end
 
@@ -59,9 +60,20 @@
         case 2:
             [self toExplicityVC];
             break;
+        case 9:
+            [self toMediaTimingVC];
+            break;
         default:
             break;
     }
+}
+
+- (void)toMediaTimingVC {
+    MediaTimingViewController *vc  = [MediaTimingViewController new];
+    vc.view.backgroundColor = [UIColor grayColor];
+    vc.title = @"图层时间";
+    [self.navigationController pushViewController:vc animated:false];
+
 }
 
 - (void)toExplicityVC {

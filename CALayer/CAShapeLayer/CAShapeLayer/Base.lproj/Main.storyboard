@@ -54,18 +54,32 @@
                                     <action selector="onToVCClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Nn-Vx-yy4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNS-qo-g1p">
+                                <rect key="frame" x="0.0" y="157" width="375" height="30"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.83529411760000005" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hOM-VL-ooo"/>
+                                </constraints>
+                                <state key="normal" title="9、图层时间"/>
+                                <connections>
+                                    <action selector="onToVCClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGW-mD-KEp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Mbu-OZ-d3T" secondAttribute="trailing" id="481-qY-zGO"/>
                             <constraint firstAttribute="trailing" secondItem="AJY-Uf-Hrb" secondAttribute="trailing" id="61T-yr-1eM"/>
                             <constraint firstItem="pxv-xx-VpX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6Mt-zD-fXN"/>
+                            <constraint firstAttribute="trailing" secondItem="eNS-qo-g1p" secondAttribute="trailing" id="83s-qt-THi"/>
                             <constraint firstItem="Mbu-OZ-d3T" firstAttribute="top" secondItem="AJY-Uf-Hrb" secondAttribute="bottom" constant="1" id="9K8-qd-g6K"/>
                             <constraint firstItem="AJY-Uf-Hrb" firstAttribute="top" secondItem="pxv-xx-VpX" secondAttribute="bottom" constant="1" id="9o7-dL-pRL"/>
                             <constraint firstItem="pxv-xx-VpX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P6U-dA-W1g"/>
                             <constraint firstItem="AJY-Uf-Hrb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gVd-OO-C0q"/>
                             <constraint firstItem="Mbu-OZ-d3T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qg6-hL-Ob9"/>
+                            <constraint firstItem="eNS-qo-g1p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sOD-hg-utB"/>
                             <constraint firstAttribute="trailing" secondItem="pxv-xx-VpX" secondAttribute="trailing" id="v5d-Nn-46P"/>
+                            <constraint firstItem="eNS-qo-g1p" firstAttribute="top" secondItem="Mbu-OZ-d3T" secondAttribute="bottom" constant="1" id="yFT-sj-afk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HbN-AE-YK5"/>
